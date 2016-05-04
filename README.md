@@ -16,4 +16,4 @@ Contents
   
 ####4. Team members
   [Trung C. Nguyen](nguyencanhtrung@me.com)
-  _Waseem Hassan_
+  [Waseem Hassan](waseemh40@gmail.com)
