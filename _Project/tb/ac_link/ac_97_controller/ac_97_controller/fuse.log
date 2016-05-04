@@ -1,0 +1,27 @@
+Running: /import/software/Xilinx/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/tb_ac_97_controller_isim_beh.exe -prj /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/tb_ac_97_controller_beh.prj work.tb_ac_97_controller 
+ISim O.61xd (signature 0xb4d1ced7)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/../VHDL/peripherals.vhd" into library work
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/../VHDL/ac_link.vhd" into library work
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/../VHDL/ac97_controller.vhd" into library work
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/../tb_ac_97_controller.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 72856 KB
+Fuse CPU Usage: 110 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package lt16soc_peripherals
+Compiling architecture behavioral of entity ac_link [\ac_link(16)\]
+Compiling architecture behavioral of entity ac97_controller [\ac97_controller(16)\]
+Compiling architecture behavior of entity tb_ac_97_controller
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 VHDL Units
+Built simulation executable /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/tb_ac_97_controller_isim_beh.exe
+Fuse Memory Usage: 1171112 KB
+Fuse CPU Usage: 210 ms
+GCC CPU Usage: 430 ms

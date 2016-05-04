@@ -1,0 +1,4 @@
+work	"../VHDL/ac97_controller.vhd"
+work	"../VHDL/ac_link.vhd"
+work	"../VHDL/audio_integrated_without_wishbone.vhd"
+work	"../VHDL/peripherals.vhd"

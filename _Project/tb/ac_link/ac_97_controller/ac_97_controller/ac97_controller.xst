@@ -1,0 +1,5 @@
+set -tmpdir "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/xst/projnav.tmp"
+set -xsthdpdir "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/xst"
+elaborate
+-ifn ac97_controller.prj
+-ifmt mixed

@@ -1,0 +1,371 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti 
+nop
+
+.align
+	//address
+addr_led:		.word 0x000F0000
+addr_swt:          	.word 0x000F0004
+addr_lcd:		.word 0x000F0008
+	//counters
+cnt_top_ms:		.word 0x8236					
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2					
+      
+	//variables
+count_40:		.word 0x000000028                                                                                                                                                             
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+//inst_fs:		.word 0x00000701		done in hardware!!!
+inst_on_off:		.word 0x00000702
+inst_clear:		.word 0x00000703
+inst_mode_set:		.word 0x00000704
+
+special_cmd:		.word 0x00000707
+
+tone_40:		.word 0x0041	// 0x00340043
+	
+tone_41_53:		.word 0x2343
+
+tone_42:		.word 0x3444
+
+tone_43_55:		.word 0x2344
+
+tone_44:		.word 0x3445
+
+tone_45:		.word 0x3446
+
+tone_46:		.word 0x2346
+
+tone_47:		.word 0x3447
+
+tone_48:		.word 0x2347
+
+tone_49:		.word 0x3441
+
+tone_50:		.word 0x2341
+
+tone_51:		.word 0x3442
+
+tone_52:		.word 0x3543
+
+tone_54:		.word 0x3544
+
+
+char_4 :		.word 0x0034
+
+char_5 :		.word 0x0035
+
+	//mask
+
+mask	:		.word 0x000007FF
+
+	//tone base
+
+base_value:		.word 0x0028		//40 in Decimal
+
+
+	//imp registers
+
+//------r1 => shared between ISR and main
+//------r2 => lcd base addr
+//------r3 => mask for lcd
+//------r8 => base value for switch
+//------r10 =>counter base value
+
+
+main:
+	//load address
+ldr r2,>addr_lcd
+
+
+	//load mask
+
+ldr r3,>mask
+
+	//load counters
+ldr r10,>cnt_top_ms   //top value for 1 ms delay
+
+
+
+
+	//gp registers
+
+clr r6
+clr r7
+
+
+main_loop:
+
+
+//----------init part----------------
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_on_off	
+
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_clear
+
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_mode_set
+
+	st16	r2,r6
+
+	
+//------------init done----------------
+
+	addi r8,40		//initial value
+
+switch: //ldr r8,>base_value
+
+	clr r1
+
+	addi r1,40
+
+tone_40_l: cmp neq r1,r8
+	
+	br true >tone_41_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_40
+	call 	>display_2_chars
+
+	clr r1
+
+tone_41_l: cmp neq r1,r8
+
+	br true >tone_42_l
+
+	addi r8, 1
+
+	ldr 	r6,>tone_41_53
+	ldr 	r7,>char_4
+	call 	>display_3_chars
+
+tone_42_l: cmp neq r1,r8
+
+	br true >tone_43_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_42
+	call 	>display_2_chars
+
+tone_43_l: cmp neq r1,r8
+
+	br true >tone_44_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_43_55
+	ldr 	r7,>char_4
+	call 	>display_3_chars
+
+tone_44_l: cmp neq r1,r8
+
+	br true >tone_45_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_44
+	call 	>display_2_chars
+
+tone_45_l: cmp neq r1,r8
+
+	br true >tone_46_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_45
+	call 	>display_2_chars
+
+tone_46_l: cmp neq r1,r8
+
+	br true >tone_47_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_46
+	ldr 	r7,>char_4
+	call 	>display_3_chars
+
+
+tone_47_l: cmp neq r1,r8
+
+	br true >tone_48_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_47
+	call 	>display_2_chars
+
+
+tone_48_l: cmp neq r1,r8
+
+	br true >tone_49_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_48
+	ldr 	r7,>char_4
+	call 	>display_3_chars
+
+tone_49_l: cmp neq r1,r8
+
+	br true >tone_50_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_49
+	call 	>display_2_chars
+
+tone_50_l: cmp neq r1,r8
+
+	br true >tone_51_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_50
+	ldr 	r7,>char_4
+	call 	>display_3_chars
+
+tone_51_l: cmp neq r1,r8
+
+	br true >tone_52_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_51
+	call 	>display_2_chars
+
+tone_52_l: cmp neq r1,r8
+
+	br true >tone_53_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_52
+	call 	>display_2_chars
+
+tone_53_l: cmp neq r1,r8
+
+	br true >tone_54_l
+
+	addi r8,1
+
+	ldr 	r6,>tone_43_55
+	ldr 	r7,>char_5
+	call 	>display_3_chars
+
+
+tone_54_l: cmp neq r1,r8
+
+	br true >switch		//br true >tone_55_l
+	addi r8,1
+
+	ldr 	r6,>tone_54
+	call 	>display_2_chars
+
+//tone_55_l: cmp neq r1,r8
+
+//	br true >switch
+
+//	ldr 	r6,>tone_41_53
+//	ldr 	r7,>char_5
+//	call 	>display_3_chars
+
+
+	br >switch
+
+
+//-------------------------
+
+	//subroutine for lcd...
+
+busy_check:	
+		clr r7				//inititalize inner counter
+back:		cmp neq r7,r10
+		br true >back			//if i=cnt_top
+		addi r7,1
+		nop
+		nop
+		clr r6
+update:		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		br true >update
+		addi r6,1
+		ret
+		nop
+
+
+display_2_chars:
+
+	call 	>busy_check
+
+	st16	r2,r6
+
+	//rsh 	r6,r6,16		//shift right to get next data 
+
+	call 	>busy_check
+
+	addi	r6, 1
+
+	st16	r2,r6
+
+	call 	>busy_check
+
+	clr r5
+	addi r5,0x07				//avoid continuous printing.... maybe
+	lsh	r5,r5,16
+	addi r5,0x07
+	st16	r2,r6
+
+	ret
+
+
+display_3_chars:
+
+	call 	>busy_check
+
+	st16	r2,r6
+
+	rsh 	r6,r6,16		//shift right to get next data 
+
+	call 	>busy_check
+
+	st16	r2,r6
+
+	call 	>busy_check
+
+	st16	r2,r7
+
+	call 	>busy_check
+
+	clr r5
+	addi r5,0x07				//avoid continuous printing.... maybe
+	lsh	r5,r5,16
+	addi r5,0x07
+	st16	r2,r6
+
+	ret
+

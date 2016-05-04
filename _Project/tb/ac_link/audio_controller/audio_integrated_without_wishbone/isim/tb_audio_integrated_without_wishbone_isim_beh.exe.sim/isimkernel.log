@@ -1,0 +1,28 @@
+Command line:
+   tb_audio_integrated_without_wishbone_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59053
+
+Mon Jan 11 11:53:29 2016
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 161.067 Meg
+
+ Total Signals          : 56
+ Total Nets             : 343
+ Total Signal Drivers   : 23
+ Total Blocks           : 8
+ Total Primitive Blocks : 5
+ Total Processes        : 13
+ Total Traceable Variables  : 49
+ Total Scalar Nets and Variables : 1083
+
+ Total Simulation Time: 52.5 sec
+
+ Current Memory Usage: 235.524 Meg
+
+Mon Jan 11 11:54:55 2016
+

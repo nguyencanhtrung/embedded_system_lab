@@ -1,0 +1,42 @@
+Release 13.2 - xst O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/ac_97_controller/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd" in Library work.
+Architecture lt16soc_peripherals of Entity lt16soc_peripherals is up to date.
+Compiling vhdl file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd" in Library work.
+Architecture behavioral of Entity ac_link is up to date.
+Compiling vhdl file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd" in Library work.
+Architecture behavioral of Entity ac97_controller is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+
+Total memory usage is 311624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,325 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti 
+nop
+
+.align
+	//address
+addr_led:		.word 0x000F0000
+addr_swt:          	.word 0x000F0004
+addr_lcd:		.word 0x000F0008
+
+	//variables
+count_40:		.word 0x00000028
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+inst_fs:		.word 0x0438
+inst_fs_n:		.word 0x0038
+inst_on_off:		.word 0x040E
+inst_on_off_n:		.word 0x000E
+inst_clear:		.word 0x0401
+inst_clear_n:		.word 0x0001
+inst_mode_set:		.word 0x0406
+inst_mode_set_n:	.word 0x0006
+
+
+en_h:			.word 0x600
+en_l:			.word 0x200
+
+char_a:			.word 0x41
+
+char_s:			.word 0x53
+
+char_m:			.word 0x4D
+
+char_r:			.word 0x52
+
+char_o:			.word 0x4F
+
+char_c:			.word 0x43
+
+char_k:			.word 0x4B
+
+char_space:		.word 0x10
+
+char_sc:		.word 0x21
+
+
+led_data:	.word 0x1
+
+		
+
+main:
+	//load address
+ldr r0,>addr_lcd	//LCD addr
+
+	//r2 r5
+
+	//load counters
+ldr r10,>cnt_top_ms   //top value for 1 ms delay
+ldr r11,>cnt_top_us   //top value for 1 us delay
+ldr r8,>cnt_top_37_us
+
+	// housekeeping for registers
+
+ldr r3, >en_h
+ldr r4, >en_l
+
+
+main_loop:
+
+	clr	r6
+	ldr 	r9,>count_40		
+
+	ldr 	r1,>inst_fs		//0x04 because Enable must be 1 !!!
+	st32	r0,r1
+
+wait_40_ms:	call	>wait_ms
+		cmp neq r6,r9
+		br true >wait_40_ms
+		addi r6,1
+		nop
+		clr r6
+
+	ldr 	r1,>inst_fs_n		//0x04 because Enable must be 1 !!!
+	st32	r0,r1
+
+	call >wait_us	
+
+	ldr 	r1,>inst_on_off
+	st32	r0,r1
+
+	call >wait_37_us
+
+	ldr 	r1,>inst_on_off_n
+	st32	r0,r1
+
+	call >wait_us
+
+	ldr 	r1,>inst_clear
+	st32	r0,r1
+	
+
+	call >wait_37_us
+
+	ldr 	r1,>inst_clear_n
+	st32	r0,r1
+
+	call >wait_us
+
+	ldr 	r1,>inst_mode_set
+	st32	r0,r1
+
+	clr 	r6
+	ldr 	r9,>count_520
+
+	call >wait_ms
+
+wait_520_us:	call	>wait_us
+		cmp neq r6,r9
+		br true >wait_520_us
+		addi r6,1
+		nop
+		clr r6
+
+	ldr 	r1,>inst_mode_set_n
+	st32	r0,r1
+
+
+	call >wait_37_us
+
+	//initialization complete...
+
+	ldr	r1,>char_a	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+
+	ldr	r1,>char_s	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_m	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_space	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_r	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_o	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_c	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_k	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_s	//E=1,RS=1,'A' @ location 0
+
+	add	r5, r1,r3
+	
+	st32	r0,r5
+
+	call >wait_37_us
+
+	add	r5, r1,r4
+	st32	r0,r1
+
+
+	call >wait_us
+
+	ldr	r1,>char_sc	//E=1,RS=1,'!' @ location 0
+	st32	r0,r1
+
+	call >wait_37_us
+
+		//ldr	r1,>char_sc_n	//E=1,RS=1,'!' @ location 0
+	st32	r0,r1
+
+	call >wait_us
+
+	clr	r6
+	clr 	r9
+
+
+	br always >main_loop
+	nop
+
+
+
+
+
+.align
+	//counters
+cnt_top_ms:		.word 0x8236					
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2					
+
+
+
+	//subroutine to iterate until counter overflow
+wait_ms:
+	clr r7				//inititalize inner counter
+inc_ms:	cmp neq r7,r10
+	br true >inc_ms			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+wait_us:
+	clr r7				//inititalize inner counter
+inc_us:	cmp neq r7,r11
+	br true >inc_us			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+wait_37_us:
+	clr r7				//inititalize inner counter
+inc_37_us:	cmp neq r7,r8
+	br true >inc_37_us			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+
+
+
+
+

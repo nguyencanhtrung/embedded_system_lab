@@ -1,0 +1,33 @@
+V3 16
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac97_controller.vhd 2016/01/08.20:31:57 O.61xd
+EN work/ac97_controller 1452286286 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac97_controller.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/lt16soc_peripherals 1452286283
+AR work/ac97_controller/Behavioral 1452286287 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac97_controller.vhd \
+      EN work/ac97_controller 1452286286 CP ac_link
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac_link.vhd 2016/01/08.20:32:14 O.61xd
+EN work/ac_link 1452286284 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac_link.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/lt16soc_peripherals 1452286283
+AR work/ac_link/Behavioral 1452286285 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac_link.vhd \
+      EN work/ac_link 1452286284
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/audio_integrated_without_wishbone.vhd 2016/01/08.21:50:57 O.61xd
+EN work/audio 1452286288 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/audio_integrated_without_wishbone.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/MATH_REAL 1308643377 PB work/lt16soc_peripherals 1452286283
+AR work/audio/Behavioral 1452286289 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/audio_integrated_without_wishbone.vhd \
+      EN work/audio 1452286288 CP ac97_controller
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/peripherals.vhd 2016/01/08.18:56:47 O.61xd
+PH work/lt16soc_peripherals 1452286282 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/peripherals.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 CD ac_link \
+      CD ac97_controller
+PB work/lt16soc_peripherals 1452286283 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/peripherals.vhd \
+      PH work/lt16soc_peripherals 1452286282

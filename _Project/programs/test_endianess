@@ -1,0 +1,75 @@
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+//********** MAIN PROGRAM **********//
+//Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	value
+//*r2	:	
+//*r3	:	
+//*r4	:	
+//*r5	:	     
+//*r6	:	 
+//*r7	:	
+//*r8	:	
+//*r9	:	
+//*r10	:	
+//*r11	:	
+//--------------
+//*r12	:	
+//*r13	:    
+//*r14	:	
+//*r15	:	
+
+main:
+	ldr r0, >LED_addr
+	
+	ldr r1, >value
+
+	st32 r0, r1
+	
+	// delay 2s
+	clr r9
+	ldr r9, >delay2s		// load delay value
+	call >wait
+
+	st16 r0, r1
+	
+	// delay 2s
+	clr r9
+	ldr r9, >delay2s		// load delay value
+	call >wait
+
+	st08 r0, r1
+	
+	// delay 2s
+	clr r9
+	ldr r9, >delay2s		// load delay value
+	call >wait
+
+	br >main
+	nop
+
+wait:
+		clr r8
+inc:	
+		cmp neq r8, r9
+		br true >inc
+		addi r8, 1
+		ret
+		nop
+
+// Constant Declaration
+.align
+LED_addr:		.word 0x000F0000
+
+//* CONSTANT declaration */
+delay40ms:		.word 0x145855
+delay2s:		.word 0x3F9409A
+value:			.word 0x08040201

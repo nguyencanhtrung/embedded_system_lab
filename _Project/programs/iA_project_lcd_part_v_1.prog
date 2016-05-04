@@ -1,0 +1,225 @@
+
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+irq3:
+	br >irq3_handler
+	nop
+// ******** END IRQ TABLE **********//
+
+//********** MAIN PROGRAM **********
+//Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	LCD_addr
+//*r2	:	SW_BTN_addr
+//*r3	:	mask/ general purpose
+//*r4	:	inc/dec value or tone value
+//*r5	:	gp(BTN input in ISR)    
+//*r6	:	 
+//*r7	:	
+//*r8	:	
+//*r9	:	
+//*r10	:	counter/busy_check
+//*r11	:	counter/busy_check
+//--------------
+//*r12	:	stack pointer
+//*r13	:   	link register  -- set by call instruction
+//*r14	:	status register
+//*r15	:	program counter
+
+main:
+	// *** INITIALISATION PROCESS ***
+	ldr r0, >LED_addr	// address của LED được store vào reg r0
+	ldr r1, >LCD_addr	// address của LED được store vào reg r0
+	ldr r2, >SW_BTN_addr	// load addr of BTN to r2
+	
+	clr r4
+	addi r4, 0x08			// ENABLE interrupt for SW_BTN by software (4)
+	st08 r2, r4		//edited from r0		// Load content of r3 into *r2 ; 
+						// HW point of view: It will be loaded to data(7 downto 0);
+
+
+	ldr sp, >stack_init			// Initialize the stack pointer  (1)
+	clr sr					// Set runtime priority to zero	 (2)
+	
+	// **** DONE INITIALISATION ****
+	clr r4
+
+	call >busy_check
+	st16	r1,r4		//r3= LCD_addr
+
+	addi r4,40		//starting tone is 40!!!
+	
+check_axial:
+
+	clr r7
+	addi r7,0x03
+	st16 r0,r7
+
+		ldr r8,>count_1000
+		clr r9
+
+wait_new:	call	>wait_ms
+		cmp neq r9,r8
+		br true >wait_new
+		addi r9,1
+		
+		nop
+	
+	clr r7
+	addi r7,0x30
+	st16 r0,r7
+	
+	br >check_axial
+	nop
+// ********* ENDING OF MAIN PROGRAM **********//
+
+// ********* Interrupt Handler ****************
+hardfault_handler:
+           		reti
+           		nop
+
+memfault_handler:
+           		reti
+		   	nop
+
+irq3_handler:
+	// push to stack
+		addi sp, -4
+		st32 sp, sr
+		
+		addi sp, -4
+		st32 sp, lr
+		
+		addi sp, -4
+		st32 sp, r8
+		
+		addi sp, -4
+		st32 sp, r9
+	// end pushing
+	
+		clr r6
+		clr r7				
+		ldr r3, >mask_btn
+		
+		ld16 r5, r2		// load content of *r2(sw_btn) to r5 		=> r5 = xxxxx|SW| BTN
+		and r5, r5, r3		// Extract only BTN part  r10 = r10 and 0x7F  	=> r10 = 0x000000|BTN
+
+		
+		clr r6
+		addi r6, 0x08
+		cmp eq r6, r3			// up detected
+		br true >inc_pressed
+		nop
+
+		clr r6
+		addi r6, 0x40
+		cmp eq r6, r3			// down detected
+		br true >dec_pressed
+		nop
+		
+		br >exit_isr			
+		nop
+inc_pressed:
+		clr r6
+		addi r6, 55
+		cmp eq r4, r6
+		br true >exit_isr
+		nop
+		addi r4,1
+		call >busy_check
+		st16	r1,r4		//r3= LCD_addr	
+		br >exit_isr
+		nop
+dec_pressed:
+		clr r6
+		addi r6, 40
+		cmp eq r4, r6
+		br true >exit_isr
+		nop
+		addi r4,-1
+		call >busy_check
+		st16	r1,r4		//r3= LCD_addr
+exit_isr:
+
+		// pop out of stack
+		ld32 r9, sp
+		addi sp, 4
+		
+		ld32 r8, sp
+		addi sp, 4
+		
+		ld32 lr, sp
+		addi sp, 4
+		
+		ld32 sr, sp
+		addi sp, 4
+		// end poping
+		
+		reti
+		nop
+//-------------------------		
+	//LCD subroutine
+
+busy_check:	
+		clr r11				
+		ldr r10,>cnt_top_ms		//to save registers
+
+back:		cmp neq r11,r10
+		br true >back			//if i=cnt_top
+		addi r11,1
+		nop
+		nop
+	
+		clr r11
+		ldr r10, >mask_lcd		//to save registers
+
+update:		ld16 	r11,r1			// get data from slave i.e. LCD=r1
+		nop
+		cmp eq 	r11,r10			
+		br true >back
+		addi r11,1			//dummy instruction
+		ret
+		nop
+
+
+wait_ms:
+		clr r11				
+		ldr r10,>cnt_top_ms		//to save registers
+
+inc_ms:		cmp neq r11,r10
+		br true >inc_ms			//if i=cnt_top
+		addi r11,1
+		nop
+		ret				//else
+		nop
+
+
+
+//-------------------------		
+// ********* END OF SUBROUTINE ********
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:    	.word 0x000F0004
+LCD_addr:		.word 0x000F0008
+stack_init:		.word 0x0000041F
+and_mask:		.word 0x000000FF		//edited
+
+// Need to check
+axialmeter:		.word 0x00000401
+prevaxialstate:		.word 0x0000040A
+
+//* CONSTANT declaration */
+delay40ms:		.word 0x145855
+delay1s:		.word 0x1FCA055
+mask_btn:			.word 0x0000007F
+mask_lcd:		.word 0x000007FF
+cnt_top_ms:		.word 0x8236
+count_1000:		.word 0x000007D0
+

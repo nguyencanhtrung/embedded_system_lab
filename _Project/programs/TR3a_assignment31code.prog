@@ -1,0 +1,261 @@
+// Assignment 3 part a
+// Date 19-Nov-15; 9:11PM
+// Programmer: Trung Nguyen
+//Explanation:
+//Instruction Set is written/ updated on LCD_addr
+//That value will be read by LCDController and store in lcd_reg in "LCDController.vhd"
+//By setting 2 bit RS (lcd_reg(9)) and RW (lcd_reg(8)), we can control LCD operations (writing/reading DATA or INSTRUCTION SET)
+//RS   RW        Operations
+//0    0         Writing Instruction Set
+//0    1         Reading instruction: actually reading BUSY FLAG and CURRENT ADDRESS that the cursor is on
+//1    0         Writing Data to RAM of LCD(characters)
+//1    1         Reading Data from RAM of LCD (can say LCD)         
+//Remember: 
+//Instruction Set is only sampled at falling edge of enable signal which is lcd_reg(10);
+
+//*********** Handling when reseting system and occuring hard/mem faults ***********/
+reset:
+	br always >main
+	nop
+hardfault:
+	reti
+	nop
+memfault:
+	reti 
+	nop
+//*********** Ending of handling      ***********/
+//* CONSTANT declaration */
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:      	.word 0x000F0004
+LCD_addr:		.word 0x000F0008
+
+//* CONSTANT for writing INSTRUTION SET -- RS =0, RW = 0 */
+function_set:		.word 0x038        	// with enable low
+function_set_en:	.word 0x438        	// with enable high
+
+display_on_off:		.word 0x00E		// with blinking cursor - enable low
+display_on_off_en:	.word 0x40E
+
+display_clear:		.word 0x001
+display_clear_en:	.word 0x401
+
+entry_mode_set:		.word 0x006
+entry_mode_set_en:	.word 0x406
+
+//* CONSTANT for character*/
+lcd_value:		.word 0x01
+char_a:			.word 0x241		// without enable
+char_a_en:		.word 0x641		// with enable
+
+char_s:			.word 0x273		// without enable
+char_s_en:		.word 0x673		// with enable
+
+char_e:			.word 0x265		// without enable
+char_e_en:		.word 0x665		// with enable
+
+char_m:			.word 0x26D		// without enable
+char_m_en:		.word 0x66D		// with enable
+
+char_b:			.word 0x262		// without enable
+char_b_en:		.word 0x662		// with enable
+
+char_l:			.word 0x26C		// without enable
+char_l_en:		.word 0x66C		// with enable
+
+char_r:			.word 0x272		// without enable
+char_r_en:		.word 0x672		// with enable
+
+char_o:			.word 0x26F		// without enable
+char_o_en:		.word 0x66F		// with enable
+
+char_c:			.word 0x263		// without enable
+char_c_en:		.word 0x663		// with enable
+
+char_k:			.word 0x26B		// without enable
+char_k_en:		.word 0x66B		// with enable
+
+char_space:		.word 0x210		// without enable
+char_space_en:		.word 0x610		// with enable
+
+//* CONSTANT for delay*/
+delay40ms:			.word 0x145855
+delay1us:			.word 0x21
+delay37us:			.word 0x4D1
+delay1_52ms:			.word 0x1046A
+
+//********** END OF DECLARATIONS **************//
+
+
+//********** MAIN PROGRAM ********************//
+//* Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	LCD_addr
+//*r2	:	
+//*r3	:	Character CONST
+//*r4	:	Delay constant
+//*r5	:	Instruction set constant
+//*r6	:	LED value
+//*r7	:
+//*r8	:	Counter
+//*r9	:	
+//*r10	:
+//*r11	:	
+main:
+	ldr r0, >LED_addr			// giá trị address của LED/ LCD được store vào reg r0 và r1
+	ldr r1, >LCD_addr
+	// Setting for DELAY OF 40ms
+	clr r4
+	ldr r4, >delay40ms   		// r4 is assigned with top_counter of 40 ms
+	call >wait					// wait for 40 ms
+	// Writing the FUNCTION SET with enable high
+	clr r5
+	ldr r5, >function_set_en	// writing function set on register r5
+	st16 r1, r5					// giá trị được lưu trong register r5 được lưu vào pointer có address là content của reg r1 = address_LCD
+								// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		// r4 is assigned with top_counter of 1 us
+	call >wait					// wait for 1us
+	// Writing the function set with enable low
+	clr r5
+	ldr r5, >function_set		// writing function set on register r5
+	st16 r1, r5					
+	
+	// Setting for DELAY OF 37us
+	clr r4
+	ldr r4, >delay37us   		// r4 is assigned with top_counter of 37 us
+	call >wait					// wait for 37 us
+	
+	//
+	// Writing the DISPLAY ON/OFF with enable high
+	clr r5
+	ldr r5, >display_on_off_en		// writing function set on register r5
+	st16 r1, r5					// giá trị được lưu trong register r5 được lưu vào pointer có address là content của reg r1 = address_LCD
+								// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		// r4 is assigned with top_counter of 1 us
+	call >wait					// wait for 1us
+	// Writing the display ON/OFF with enable low
+	clr r5
+	ldr r5, >display_on_off		// writing function set on register r5
+	st16 r1, r5					
+	
+	// Setting for DELAY OF 37us
+	clr r4
+	ldr r4, >delay37us   		// r4 is assigned with top_counter of 37 us
+	call >wait					// wait for 37 us
+	
+	//
+	// Writing the DISPLAY CLEAR with enable high
+	clr r5
+	ldr r5, >display_clear_en	// writing function set on register r5
+	st16 r1, r5					// giá trị được lưu trong register r5 được lưu vào pointer có address là content của reg r1 = address_LCD
+								// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		// r4 is assigned with top_counter of 1 us
+	call >wait					// wait for 1us
+	// Writing the display clear with enable low
+	clr r5
+	ldr r5, >display_clear		// writing function set on register r5
+	st16 r1, r5					
+	
+	// Setting for DELAY OF 1.52ms
+	clr r4
+	ldr r4, >delay1_52ms   		// r4 is assigned with top_counter of 37 us
+	call >wait					// wait for 37 us
+	
+	
+	//
+	// Writing the ENTRY MODE SET with enable high
+	clr r5
+	ldr r5, >entry_mode_set_en	// writing function set on register r5
+	st16 r1, r5					// giá trị được lưu trong register r5 được lưu vào pointer có address là content của reg r1 = address_LCD
+								// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		// r4 is assigned with top_counter of 1 us
+	call >wait					// wait for 1us
+	// Writing the function set with enable low
+	clr r5
+	ldr r5, >entry_mode_set		// writing function set on register r5
+	st16 r1, r5	
+		// Setting for DELAY OF 37us
+	clr r4
+	ldr r4, >delay37us   		// r4 is assigned with top_counter of 37 us
+	call >wait					// wait for 37 us
+	// DONE INITIALISATION				
+// SENDING CHARACTERS
+// LETTER 'A'
+	clr r3
+	ldr r3, >char_a_en	
+	st16 r1, r3												// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		
+	call >wait					
+	// Writing the function set with enable low
+	clr r3
+	ldr r3, >char_a		
+	st16 r1, r3		
+	// Setting for delay of 37us
+	clr r4
+	ldr r4, >delay37us   		
+	call >wait					
+
+// LETTER 's'
+	clr r3
+	ldr r3, >char_s_en	
+	st16 r1, r3												// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		
+	call >wait					
+	// Writing the function set with enable low
+	clr r3
+	ldr r3, >char_s		
+	st16 r1, r3		
+	// Setting for delay of 37us
+	clr r4
+	ldr r4, >delay37us   		
+	call >wait	
+
+
+// LETTER 'm'
+	clr r3
+	ldr r3, >char_m_en	
+	st16 r1, r3												// enable is high							
+	// Setting for delay of 1us
+	clr r4
+	ldr r4, >delay1us   		
+	call >wait					
+	// Writing the function set with enable low
+	clr r3
+	ldr r3, >char_m		
+	st16 r1, r3		
+	// Setting for delay of 37us
+	clr r4
+	ldr r4, >delay37us   		
+	call >wait
+
+//********** ENDING OF MAIN PROGRAM **********//
+
+//********** SUBROUTINE **************//
+wait:
+		clr r8
+inc:	
+		cmp neq r8, r4
+		br true >inc
+		addi r8, 1
+
+		ret
+		nop
+
+//********** END OF SUBROUTINE ********************//
+
+
+
+
+

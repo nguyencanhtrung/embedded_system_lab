@@ -1,0 +1,252 @@
+// Programmer: Trung Nguyen
+// Date: 26/11/2015 - 9:10 PM
+// Task: Assignment 4-b
+//	DATA [ 31-24 | 23-16 | 15-8 | 7-0 ]
+//	st08 DATA, xx     		=> xx is put on DATA(7-0); cơ chế của lệnh store là sẽ store từ địa chỉ thấp -> cao
+//	st16 DATA, xxab			=> xxab is put on DATA(15 - 0)
+//	st32 DATA, xxab_cdef	=> xxab_cdef is put on DATA(31 - 0)
+//	--------------------
+//	ld08 r0, DATA			=> DATA(31-24) is put on r0; cơ chế của lệnh load là sẽ store từ địa chỉ cao -> thấp
+//  ld16 r0, DATA			=> DATA(31-16) is put on r0
+//	ld32 r0, DATA			=> DATA(31-0) is put on r0
+//  --------------------
+//	BIG_ENDIAN representation
+//	LSByte (gran = 8)/ LSHalfWord (gran = 16) has highest address
+//	=> In assignment 2: they say SW is LSB => it should have highest address in RAM => when interfacing HW it 
+//	should be DATA [31-24]
+// ********* IRQ TABlE ************ 
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+irq3:
+	br >irq3_handler
+	nop
+// ******** END IRQ TABLE **********//
+
+//********** MAIN PROGRAM **********
+//Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	LCD_addr
+//*r2	:	SW_BTN_addr
+//*r3	:	mask/ general purpose
+//*r4	:	
+//*r5	:	addr axialmeter     
+//*r6	:	addr prevaxialstate 
+//*r7	:	value of axialstate     (8 bits)
+//*r8	:	value of prevaxialstate (8 bits)
+//*r9	:	general purpose (delay)
+//*r10	:	general purpose
+//*r11	:	general purpose (working in interrupt handler)
+//--------------
+//*r12	:	stack pointer
+//*r13	:   	link register  -- set by call instruction
+//*r14	:	status register (7 downto 2)
+//*r15	:	program counter
+
+main:
+	// *** INITIALISATION PROCESS ***
+	ldr r0, >LED_addr		// address của LED được store vào reg r0
+	ldr r2, >SW_BTN_addr	// load addr of BTN to r2
+	
+	clr r4
+	addi r4, 0x08			// ENABLE interrupt for SW_BTN by software (4)
+	st08 r0, r4				// Load content of r3 into *r2 ; 
+							// HW point of view: It will be loaded to data(15 downto 0);
+
+	clr r4
+	addi r4, 1
+	call >wait1s		// Indicator 1   *
+
+	ldr sp, >stack_init		// Initialize the stack pointer  (1)
+	clr sr					// Set runtime priority to zero	 (2)
+	
+	clr r4
+	addi r4, 2			
+	call >wait1s		// Indicator 2   *
+
+						// Assign data memory location to axialmeter and prevaxialstate (3)
+	clr r5
+	ldr r5, >axialmeter			// load addr of value to r5
+	clr r6
+	ldr r6, >prevaxialstate		// load addr of state to r6
+	
+	clr r4
+	addi r4, 4			// Indicator 3   *
+	call >wait1s
+	
+	
+				
+	clr r4
+	addi r4, 8			// Indicator 4   *
+	call >wait1s
+								
+	clr r9					// Initialize value for axial and pre-value (5)
+	st32 r5, r9				// Initial value of axialmeter is 0x00
+	nop
+	clr r9
+	st32 r6, r9				// Initial value of axialmeter is 0x00
+	
+	clr r4
+	addi r4, 16			
+	call >wait1s		// Indicator 5   *
+	// **** DONE INITIALISATION ****
+	
+	// **** Periodically check value of axilmeter, update to LED (period = 40 ms)
+check_axial:
+//	wait for 40ms
+	clr r4
+	ldr r4, >delay40ms		// load delay value
+	clr r8
+inc_i:	
+	cmp neq r8, r4
+	br true >inc_i
+	addi r8, 1
+// end of wait
+	
+	clr r4
+	ld32 r4, r5			// r4 = 0x000..axial_meter
+	clr r8
+	ld32 r8, r6			// r8 = prevaxialvalue	
+
+	cmp eq r4, r8
+	br true >check_axial
+	nop
+	st08 r0, r4				// store new value to LED
+	st32 r6, current value	// store current value to *r6
+	br >check_axial
+	nop
+// ********* ENDING OF MAIN PROGRAM **********//
+
+// ********* Interrupt Handler ****************
+hardfault_handler:
+           reti
+           nop
+
+memfault_handler:
+           reti
+		   nop
+
+irq3_handler:
+	// push to stack
+		st32 sp, sr
+		addi sp, -4
+		
+		st32 sp, lr
+		addi sp, -4
+		
+		//st32 sp, pc
+		//addi sp, -4
+		
+		st32 sp, r8
+		addi sp, -4
+		
+		st32 sp, r4
+	// end pushing
+	
+		clr r3
+		ldr r3, >mask
+		clr r7				
+		ld32 r7, r5			// r7 = axialmeter
+		
+		clr r10
+		ld16 r10, r2		// load content of *r2(sw_btn) to r9 			=> r9 = xxxxx|SW| BTN
+		and r10, r10, r3	// Extract only BTN part  r10 = r9 and 0x7F  	=> r10 = 0x000000|BTN
+						// Be very CAREFUL with this instruction: and r10, r10, r3;  
+						// the result will not be updated fast => interrupt handler will not work as expectation
+		clr r3
+		addi r3, 0x20
+		cmp eq r10, r3			// right shift detected
+		br true >right
+		nop
+		
+		clr r3
+		addi r3, 0x10
+		cmp eq r10, r3			// left shift detected
+		br true >left
+		nop
+		
+		clr r3
+		addi r3, 0x08
+		cmp eq r10, r3			// up detected
+		br true >up
+		nop
+
+		clr r3
+		addi r3, 0x40
+		cmp eq r10, r3			// down detected
+		br true >down
+		nop
+			
+		
+		
+right:	rsh r7,r7, 1			// shift axialmeter to right 1 bit 
+		br >end
+		nop
+
+left:	lsh r7,r7, 1			// shift axialmeter to left 1 bit 
+		br >end
+		nop
+
+up:		addi r7, 1			// add value by 1
+		br >end
+		nop
+
+down:	addi r7, -1			// substract value by 1
+		br >end
+		nop
+
+end:	
+		st32 r5, r7			// write the new value of axialmeter to mem
+
+		// pop out of stack
+		ld32 r4, sp
+		addi sp, 4
+		
+		ld32 r8, sp
+		addi sp, 4
+		
+		//ld32 pc, sp
+		//addi sp, 4
+		
+		ld32 lr, sp
+		addi sp, 4
+		
+		ld32 sr, sp
+		// end poping
+		
+		reti
+		nop
+//-------------------------		
+wait1s:
+		st08 r0, r4				// Indicator
+		clr r9
+		ldr r9, >delay1s		// load delay value
+		clr r8
+inc:	
+		cmp neq r8, r9
+		br true >inc
+		addi r8, 1
+		ret
+		nop
+//-------------------------		
+// ********* END OF SUBROUTINE ********
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:    .word 0x000F0004
+LCD_addr:		.word 0x000F0008
+stack_init:		.word 600
+
+// Need to check
+axialmeter:		.word 0x00000401
+prevaxialstate:	.word 0x0000040A
+
+//* CONSTANT declaration */
+delay40ms:		.word 0x145855
+delay1s:		.word 0x1FCA055
+mask:			.word 0x0000007F

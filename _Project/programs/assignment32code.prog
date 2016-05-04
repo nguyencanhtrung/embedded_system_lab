@@ -1,0 +1,183 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti 
+nop
+
+.align
+	//address
+addr_led:		.word 0x000F0000
+addr_swt:          	.word 0x000F0004
+addr_lcd:		.word 0x000F0008
+	//counters
+cnt_top_ms:		.word 0x8236					
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2					
+
+	//variables
+count_40:		.word 0x00000028
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+inst_fs:		.word 0x1000
+inst_on_off:		.word 0x2000
+
+inst_fs_n:		.word 0x0038
+inst_on_off_n:		.word 0x000E
+inst_clear:		.word 0x0401
+inst_clear_n:		.word 0x0001
+inst_mode_set:		.word 0x0406
+inst_mode_set_n:	.word 0x0006
+
+char_a:			.word 0x0641
+char_a_n:		.word 0x0241
+char_s:			.word 0x0653
+char_s_n:		.word 0x0253
+char_m:			.word 0x064D
+char_m_n:		.word 0x024D
+char_r:			.word 0x0652
+char_r_n:		.word 0x0252
+char_o:			.word 0x064F
+char_o_n:		.word 0x024F
+char_c:			.word 0x0643
+char_c_n:		.word 0x0243
+char_k:			.word 0x064B
+char_k_n:		.word 0x024B
+char_space:		.word 0x0610
+char_space_n:		.word 0x0210
+char_sc:		.word 0x0621
+char_sc_n:		.word 0x0221
+
+led_data:	.word 0x0F
+led_data_in:	.word 0xF0
+		
+
+main:
+	//load address
+ldr r0,>addr_lcd	//LCD addr
+ldr r2,>addr_led
+ldr r3, >led_data_in
+ldr r5, >led_data
+	//load counters
+ldr r10,>cnt_top_ms   //top value for 1 ms delay
+ldr r11,>cnt_top_us   //top value for 1 us delay
+ldr r8,>cnt_top_37_us
+
+	// housekeeping for registers
+clr r9
+
+
+main_loop:
+
+
+	ldr 	r9,>count_40
+	st32	r2,r3
+
+	ldr 	r6,>inst_fs		
+	st32	r0,r6
+	clr r6
+
+wait_40_ms:	call	>wait_ms
+		cmp neq r6,r9
+		br true >wait_40_ms
+		addi r6,1
+		nop
+		clr r6
+
+
+wait_40_ms_1:	call	>wait_ms
+		cmp neq r6,r9
+		br true >wait_40_ms_1
+		addi r6,1
+		nop
+		clr r6
+
+
+	ldr 	r6,>inst_on_off		
+	st32	r0,r6
+	clr r6
+
+
+	//initialization complete...
+
+
+	//ldr	r1,>char_a	//E=1,RS=1,'A' @ location 0
+	//st32	r0,r1
+
+	//call >wait_37_us
+
+	//ldr	r1,>char_a_n	//E=1,RS=1,'A' @ location 0
+	//st32	r0,r1
+
+
+	call >wait_us
+	clr	r6
+	ldr 	r9,>count_1000		
+
+wait_2_s:	call	>wait_ms
+		cmp neq r6,r9
+		br true >wait_2_s
+		addi r6,1
+		nop
+		clr r6
+
+	st32	r2,r5
+
+	ldr 	r9,>count_1000		
+
+wait_1_s:	call	>wait_ms
+		cmp neq r6,r9
+		br true >wait_1_s
+		addi r6,1
+		nop
+		clr r6
+
+
+
+
+
+
+	br always >main_loop
+	nop
+
+
+
+
+
+	//subroutine to iterate until counter overflow
+wait_ms:
+	clr r7				//inititalize inner counter
+inc_ms:	cmp neq r7,r10
+	br true >inc_ms			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+wait_us:
+	clr r7				//inititalize inner counter
+inc_us:	cmp neq r7,r11
+	br true >inc_us			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+wait_37_us:
+	clr r7				//inititalize inner counter
+inc_37_us:	cmp neq r7,r8
+	br true >inc_37_us			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+
+
+
+
+
+
+

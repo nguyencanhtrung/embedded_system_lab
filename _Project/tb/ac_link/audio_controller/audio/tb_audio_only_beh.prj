@@ -1,0 +1,2 @@
+vhdl work "../VHDL/audio.vhd"
+vhdl work "tb_audio_only.vhd"

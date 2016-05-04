@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/tb_audio_only_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_audio_only" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/tb_audio_only/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/pcm_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcm_sync</obj_property>
+      <obj_property name="ObjectShortName">pcm_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/new_tone" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">new_tone</obj_property>
+      <obj_property name="ObjectShortName">new_tone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/uut/tone_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tone_sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tone_sel[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/pcm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcm[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pcm[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_audio_only/ce" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+</wave_config>

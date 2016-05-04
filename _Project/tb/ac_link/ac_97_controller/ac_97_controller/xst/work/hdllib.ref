@@ -1,0 +1,6 @@
+AR ac97_controller behavioral /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd sub00/vhpl05 1452276631
+PH lt16soc_peripherals NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd sub00/vhpl00 1452276626
+AR ac_link behavioral /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd sub00/vhpl03 1452276629
+EN ac_link NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd sub00/vhpl02 1452276628
+EN ac97_controller NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd sub00/vhpl04 1452276630
+PB lt16soc_peripherals lt16soc_peripherals /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd sub00/vhpl01 1452276627

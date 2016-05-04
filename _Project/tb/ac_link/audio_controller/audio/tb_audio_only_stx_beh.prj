@@ -1,0 +1,2 @@
+vhdl isim_temp "../VHDL/audio.vhd"
+vhdl isim_temp "tb_audio_only.vhd"

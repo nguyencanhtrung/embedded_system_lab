@@ -1,0 +1,8 @@
+EN audio NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/audio_integrated_without_wishbone.vhd sub00/vhpl06 1452286288
+AR ac97_controller behavioral /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac97_controller.vhd sub00/vhpl05 1452286287
+PH lt16soc_peripherals NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/peripherals.vhd sub00/vhpl00 1452286282
+AR ac_link behavioral /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac_link.vhd sub00/vhpl03 1452286285
+EN ac_link NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac_link.vhd sub00/vhpl02 1452286284
+EN ac97_controller NULL /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/ac97_controller.vhd sub00/vhpl04 1452286286
+PB lt16soc_peripherals lt16soc_peripherals /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/peripherals.vhd sub00/vhpl01 1452286283
+AR audio behavioral /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/VHDL/audio_integrated_without_wishbone.vhd sub00/vhpl07 1452286289

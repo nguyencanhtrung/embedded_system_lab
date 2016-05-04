@@ -1,0 +1,227 @@
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+irq_btn:
+	br >irpt_handler
+	nop
+//**** END IRQ TABLE****/
+//********** END OF DECLARATIONS **************//
+//********** MAIN PROGRAM ********************//
+//* Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	SW_BTN_addr
+//*r2	:	mem_addr
+//*r3	:	LCD_addr
+//*r4	:	mask_inc
+//*r5	:	mask_dec
+//*r6	:	mask_play
+//*r7	:	shared between ISR and main
+//*r8	:	used by ISR
+//*r9	:	used by main
+//*r10	:	used by LCD subroutine
+//*r11	:	used by LCD subroutine
+//*r12	:	
+//*r13	:   	
+//*r14	:	
+//*r15	:	
+
+main:
+		//load addresses
+	ldr r7, >LED_addr		//edited			
+	ldr r1, >SW_BTN_addr
+	ldr r2, >mem_addr
+	ldr r3, >LCD_addr
+
+		//load masks
+	ldr r4, >mask_inc
+	ldr r5, >mask_dec
+	ldr r6, >mask_play
+
+
+
+	
+	
+		// Enable interrupt for SW_BTN by software
+	clr r9
+	addi r9, 0x08			// ENABLE interrupt for SW_BTN by software (4)
+	//st08 r1, r9		 	//r1= SW_BTN addr
+		
+loop:
+
+		clr r9
+			
+		addi 	r9, 0x40
+
+		st16 r7,r9
+
+		call 	>busy_check
+		st16	r3,r9		//r3= LCD_addr
+
+		ldr r8,>cnt_top_ms
+		ldr r0,>count_1000
+		clr r9
+
+wait_new:	call	>wait_ms
+		cmp neq r9,r0
+		br true >wait_new
+		addi r9,1
+		
+		nop
+
+		clr r9
+		addi 	r9, 0x0F
+		st16 r7,r9
+		clr r9
+		call 	>busy_check			
+		addi 	r9, 42	//char a
+		st16	r3,r9		//r3= LCD_addr
+
+		
+		clr r9
+
+wait_2:		call	>wait_ms
+		cmp neq r9,r0
+		br true >wait_2
+		addi r9,1
+		nop
+
+		clr r9
+		addi 	r9, 0x00
+		st16 r7,r9
+		clr r9
+		call 	>busy_check			
+		addi 	r9, 53
+		st16	r3,r9		//r3= LCD_addr
+
+
+
+
+		clr r9
+
+wait_3:		call	>wait_ms
+		cmp neq r9,r0
+		br true >wait_3
+		addi r9,1
+		nop
+
+
+
+
+
+		br always >loop
+
+
+
+//********** ENDING OF MAIN PROGRAM **********//
+
+
+
+//********** SUBROUTINES ********************//	
+
+	// Interrupt Handlers
+
+hardfault_handler:
+           reti
+
+memfault_handler:
+           reti
+		   
+irpt_handler:	
+		ld16 r8, r1				// get switch data
+		ldr r0,>mask_btn
+		and r8, r8, r0				// Extract only BTN part  r8 = r8 and 0x7F  	=> r8 = 0x000000|BTN
+		//add r7,r8,0				//put r8 into shared reg; main will make this zero
+		ldr r0,>LED_addr			//restore reg...
+		reti
+		nop
+
+
+
+
+	//LCD subroutine
+
+busy_check:	
+		clr r11				
+		ldr r10,>cnt_top_ms		//to save registers
+
+back:		cmp neq r11,r10
+		br true >back			//if i=cnt_top
+		addi r11,1
+		nop
+		nop
+	
+		clr r11
+		ldr r10, >mask_lcd		//to save registers
+
+update:		ld16 	r11,r3			// get data from slave i.e. LCD
+		nop
+		cmp eq 	r11,r10			
+		br true >back
+		addi r11,1			//dummy instruction
+		ret
+		nop
+
+
+wait_ms:
+		clr r6				//inititalize inner counter
+inc_ms:		cmp neq r6,r8
+		br true >inc_ms			//if i=cnt_top
+		addi r6,1
+		nop
+		ret				//else
+		nop
+
+
+
+
+//********** END OF SUBROUTINE ********************//
+
+
+//* Peripheral address declaration */
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:    	.word 0x000F0004
+LCD_addr:		.word 0x000F0008
+
+//masks
+
+mask_lcd:		.word 0x000007FF
+mask_btn:		.word 0x0000007F
+mask_inc:		.word 0x0000007F
+mask_dec:		.word 0x0000007F
+mask_play:		.word 0x0000007F
+
+
+// RAM data.... need to check
+mem_addr:		.word 0x00000401
+
+
+//* CONSTANT declaration */
+cnt_top_ms:		.word 0x8236
+inst_fs:		.word 0x00000701
+inst_on_off:		.word 0x00000702
+inst_clear:		.word 0x00000703
+inst_mode_set:		.word 0x00000704
+special_cmd:		.word 0x00000707
+
+	//counters
+		
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2
+cnt_top_500_us:		.word 0x4268
+      
+	//variables
+count_40:		.word 0x000000028                                                                                                                                                             
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+
+
+

@@ -1,0 +1,24 @@
+Running: /import/software/Xilinx/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/tb_audio_only_isim_beh.exe -prj /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/tb_audio_only_beh.prj work.tb_audio_only 
+ISim O.61xd (signature 0xb4d1ced7)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/../VHDL/audio.vhd" into library work
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/tb_audio_only.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 73288 KB
+Fuse CPU Usage: 150 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package math_real
+Compiling architecture behavioral of entity audio [\audio(16,8)\]
+Compiling architecture behavior of entity tb_audio_only
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Built simulation executable /import/lab/esylab/esylab_06/Trung/project/ac_link/audio_controller/audio/tb_audio_only_isim_beh.exe
+Fuse Memory Usage: 1171424 KB
+Fuse CPU Usage: 270 ms
+GCC CPU Usage: 380 ms

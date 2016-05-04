@@ -1,0 +1,282 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti 
+nop
+
+.align
+	//address
+addr_led:		.word 0x000F0000
+addr_swt:          	.word 0x000F0004
+addr_lcd:		.word 0x000F0008
+	//counters
+cnt_top_ms:		.word 0x8236					
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2					
+      
+	//variables
+count_40:		.word 0x000000028                                                                                                                                                             
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+inst_fs:		.word 0x00000701
+inst_on_off:		.word 0x00000702
+inst_clear:		.word 0x00000703
+inst_mode_set:		.word 0x00000704
+
+special_cmd:		.word 0x00000707
+
+char_a:			.word 0x0041
+
+char_s:			.word 0x0053
+
+char_m:			.word 0x004D
+
+char_h:			.word 0x0048
+
+char_d:			.word 0x0044
+
+char_r:			.word 0x0052
+
+char_z:			.word 0x005A
+
+char_l:			.word 0x004C
+
+char_space:		.word 0x0610
+
+char_sc:		.word 0x0621
+
+	//mask
+
+mask	:		.word 0x000007FF
+
+	//leds 
+led_data_lower	:	.word 0x0F
+led_data_higher	:	.word 0xF0
+
+
+		
+//mask:	.word 0x00007FFF
+
+main:
+	//load address
+ldr r2,>addr_lcd
+
+	//load mask
+
+ldr r3,>mask
+
+	//load counters
+ldr r10,>cnt_top_ms   //top value for 1 ms delay
+
+
+	//gp registers
+
+clr r6
+clr r7
+
+
+main_loop:
+
+
+
+busy_check_1:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_1
+		nop
+		nop
+
+	ldr 	r6,>inst_fs	
+	st16	r2,r6
+
+busy_check_2:	
+		clr r6
+		ld16	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_2
+		nop
+		nop
+
+	ldr 	r6,>inst_on_off	
+	st16	r2,r6
+
+busy_check_3:	clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_3
+		nop
+		nop
+
+
+	ldr 	r6,>inst_clear
+	st16	r2,r6
+
+busy_check_4:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_4
+		nop
+		nop
+	ldr 	r6,>inst_mode_set	
+	st16	r2,r6
+
+
+	//	initilization done
+
+busy_check_5:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_5
+		nop
+		nop
+
+	ldr 	r6,>char_h
+	st16	r2,r6
+
+//busy_check_6:	
+//		clr r6
+//		ld16 	r6,r2			// get data from slave
+//		st16	r0,r4			//lower 4 leds on
+//		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+//		call	>wait_ms
+//		br true >busy_check_6
+//		nop
+//		nop
+//	ldr 	r6,>char_d
+//	st16	r2,r6
+
+busy_check_7:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_7
+		nop
+		nop
+
+	ldr 	r6,>char_r
+	st16	r2,r6
+
+
+
+//--------------------------
+
+
+busy_check_8:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_8
+		nop
+		nop
+
+	ldr 	r6,>space
+	st16	r2,r6
+
+
+busy_check_9:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_9
+		nop
+		nop
+
+	ldr 	r6,>char_r
+	st16	r2,r6
+
+
+busy_check_10:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_10
+		nop
+		nop
+
+	ldr 	r6,>char_l
+	st16	r2,r6
+
+busy_check_11:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_11
+		nop
+		nop
+
+	ldr 	r6,>char_z
+	st16	r2,r6
+
+busy_check_12:	
+		clr r6
+		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		call	>wait_ms
+		br true >busy_check_12
+		nop
+		nop
+
+	ldr 	r6,>special_cmd
+	st16	r2,r6
+
+
+//-------------------------
+
+delay:
+	st16	r0,r5		//update leds
+
+	br always >delay
+	nop
+
+
+
+
+
+	//subroutine to iterate until counter overflow
+wait_ms:
+	clr r7				//inititalize inner counter
+inc_ms:	cmp neq r7,r10
+	br true >inc_ms			//if i=cnt_top
+	addi r7,1
+	ret				//else
+	nop
+
+
+
+
+
+
+
+
+
+

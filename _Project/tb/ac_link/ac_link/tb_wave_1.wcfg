@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_ac_link" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/tb_ac_link/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/pcm_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcm_valid</obj_property>
+      <obj_property name="ObjectShortName">pcm_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/pcm_i_left" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcm_i_left[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pcm_i_left[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/pcm_i_right" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcm_i_right[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pcm_i_right[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/inst_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_addr[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/inst_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_data[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/inst_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_valid</obj_property>
+      <obj_property name="ObjectShortName">inst_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_bitclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_bitclk</obj_property>
+      <obj_property name="ObjectShortName">ac97_bitclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_sdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_sdi</obj_property>
+      <obj_property name="ObjectShortName">ac97_sdi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_sdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_sdo</obj_property>
+      <obj_property name="ObjectShortName">ac97_sdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_sync</obj_property>
+      <obj_property name="ObjectShortName">ac97_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_rst</obj_property>
+      <obj_property name="ObjectShortName">ac97_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/ac97_bitclk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ac97_bitclk_period</obj_property>
+      <obj_property name="ObjectShortName">ac97_bitclk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/uut/slots" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slots[0:11]</obj_property>
+      <obj_property name="ObjectShortName">slots[0:11]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ac_link/uut/tag" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tag[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tag[15:0]</obj_property>
+   </wvobject>
+</wave_config>

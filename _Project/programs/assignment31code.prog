@@ -1,0 +1,240 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti 
+nop
+
+.align
+	//address
+addr_led:		.word 0x000F0000
+addr_swt:          	.word 0x000F0004
+addr_lcd:		.word 0x000F0008
+	//counters
+cnt_top_ms:		.word 0x8236					
+cnt_top_us:		.word 0x22					
+cnt_top_37_us:		.word 0x4D2
+cnt_top_500_us:		.word 0x4268
+      
+	//variables
+count_40:		.word 0x000000028                                                                                                                                                             
+count_37:		.word 0x00000025		//25
+count_520:		.word 0x00000208
+count_1000:		.word 0x000007D0
+
+inst_fs:		.word 0x00000701
+inst_on_off:		.word 0x00000702
+inst_clear:		.word 0x00000703
+inst_mode_set:		.word 0x00000704
+
+special_cmd:		.word 0x00000707
+
+char_a:			.word 0x0041
+
+char_s:			.word 0x0053
+
+char_m:			.word 0x004D
+
+char_h:			.word 0x0048
+
+char_d:			.word 0x0044
+
+char_r:			.word 0x0052
+
+char_z:			.word 0x005A
+
+char_l:			.word 0x004C
+
+char_space:		.word 0x0010
+
+char_sc:		.word 0x0021
+
+char_w :		.word 0x0057
+
+char_bs:		.word 0x002F
+
+char_e :		.word 0x0045
+
+char_u :		.word 0x0055
+
+	//mask
+
+mask	:		.word 0x000007FF
+
+	//leds 
+led_data_lower	:	.word 0x0F
+led_data_higher	:	.word 0xF0
+
+
+		
+
+main:
+	//load address
+ldr r2,>addr_lcd
+
+	//load mask
+
+ldr r3,>mask
+
+	//load counters
+ldr r10,>cnt_top_ms   //top value for 1 ms delay
+
+
+	//gp registers
+
+clr r6
+clr r7
+
+
+main_loop:
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_on_off	
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_clear
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>inst_mode_set	
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>char_h
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_a
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>char_r
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_d
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>char_w
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>char_a
+	st16	r2,r6
+
+
+	call 	>busy_check
+
+	ldr 	r6,>char_r
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_e
+	st16	r2,r6
+//--------------------------------
+	call 	>busy_check
+
+	ldr 	r6,>char_space
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_r
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_u
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_l
+	st16	r2,r6
+
+	call 	>busy_check
+
+	ldr 	r6,>char_z
+	st16	r2,r6
+//------------------------------
+
+	call 	>busy_check
+
+	ldr 	r6,>char_sc
+	st16	r2,r6
+
+
+
+
+	call 	>busy_check
+
+	ldr 	r6,>special_cmd
+	st16	r2,r6
+
+
+//	call 	>busy_check
+
+//	clr r5
+//	addi r5,0x07				//avoid continuous printing.... maybe
+//	lsh	r5,r5,16
+//	addi r5,0x07
+//	st16	r2,r6
+
+//-------------------------
+
+delay:
+	st16	r0,r5		//update leds
+
+	br always >delay
+	nop
+
+
+
+
+
+	//subroutine 
+
+busy_check:	
+		clr r7				//inititalize inner counter
+back:		cmp neq r7,r10
+		br true >back			//if i=cnt_top
+		addi r7,1
+		nop
+		nop
+		clr r6
+update:		ld16 	r6,r2			// get data from slave
+		st16	r0,r4			//lower 4 leds on
+		cmp eq 	r6,r3			//r6 is for 1us counter!!!
+		br true >back
+		addi r6,1
+		ret
+		nop
+
+
+
+
+
+
+

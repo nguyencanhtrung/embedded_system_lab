@@ -1,0 +1,173 @@
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+irq_btn:
+	br >irpt_handler
+	nop
+//**** END IRQ TABLE****/
+//********** END OF DECLARATIONS **************//
+//********** MAIN PROGRAM ********************//
+//* Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	LCD_addr
+//*r2	:	SW_BTN_addr
+//*r3	:	Enable Interrupt / Target Jump
+//*r4	:	Disable Interrupt / Target Jump / LED value
+//*r5	:	addr axialmeter     (8 bits)
+//*r6	:	addr prevaxialstate (8 bits)
+//*r7	:	value of axialstate
+//*r8	:	
+//*r9	:	general purpose
+//*r10	:	general purpose
+//*r11	:	general purpose (working in interrupt handler)
+//*r12	:	stack pointer
+//*r13	:   	link register  -- set by call instruction
+//*r14	:	status register (7 downto 2)
+//*r15	:	program counter
+
+main:
+	ldr r0, >LED_addr			// giá trị address của LED/ LCD được store vào reg r0 và r1
+	ldr r1, >LCD_addr
+	ldr r2, >SW_BTN_addr
+
+	ldr r3, >enable
+	//ldr r4, >disable
+	
+	// Initialize the stack pointer ?????????????
+	ldr sp, >stack_init
+	// Set runtime priority to zero											
+	ldr r4, >value														
+	clr sr
+	// Assign data memory location to axialmeter and prevaxialstate
+	ldr r5, >axialmeter			// load addr of value to r5
+	ldr r6, >prevaxialstate		// load addr of state to r6
+	
+	
+	// Enable interrupt for SW_BTN by software
+	st32 r2, r3					// load content of r3 into *r2
+	
+	st08 r5, r4
+	// DONE INITIALISATION
+	// Periodically check value of axilmeter, update to LED (period = 40 ms)
+
+//check_axial:
+//	clr r4
+//	ld08 r4, r5					// load value from data mem *r5 to r4
+//	st08 r0, r4					// store new value to LED
+//	clr r9
+//	ldr r9, >delay40ms			// load delay value
+//	call >wait
+//	br >check_axial
+//	nop
+
+// endless loop to stop program
+final:
+           br >final
+           nop
+
+//********** ENDING OF MAIN PROGRAM **********//
+
+// Interrupt Handler
+hardfault_handler:
+           reti
+
+memfault_handler:
+           reti
+		   
+irpt_handler:	
+		ldr r5, >axialmeter			// load addr of value to r5
+		ld08 r7, r5				// load the value of axialmeter to r7
+		
+		ldr r6, >prevaxialstate			// load addr of state to r6
+		ld32 r11, r2				// load content of *r2(sw_btn) to r11;    Content: 0x0000 | BTN | SW
+		rsh r11,r11, 8				// Consider only BTN
+		
+		// detect the change to know which state of btn are used 
+		xor r10, r6, r11			// r10 = r6 xor r11; r10 store the change
+		st08 r6, r11				// Store current btn state to *r6
+		
+		clr r3
+		ldr r3, >right_con
+		cmp eq r10, r3				// right shift detected
+		br true >right
+		nop
+		
+		clr r3
+		ldr r3, >left_con
+		cmp eq r10, r3				// left shift detected
+		br true >left
+		nop
+		
+		clr r3
+		ldr r3, >down_con
+		cmp eq r10, r3				// down detected
+		br true >down
+		nop
+		
+		clr r3
+		ldr r3, >up_con
+		cmp eq r10, r3				// up detected
+		br true >up
+		nop
+		
+right:	rsh r7,r7, 1					// shift axialmeter to right 1 bit 
+		st08 r5, r7					// write to the data mem the new value
+		st08 r0, r7					// write to LED
+		reti
+		nop
+		
+left:	lsh r7,r7, 1					// shift axialmeter to left 1 bit 
+		st08 r5, r7					// write to the data mem the new value
+		st08 r0, r7					// write to LED
+		reti
+		nop
+		
+up:	addi r7, 1					// add value by 1
+		st08 r5, r7					// write to the data mem the new value
+		st08 r0, r7					// write to LED
+		reti
+		nop
+		
+down:	addi r7, -1					// substract value by 1
+		st08 r5, r7					// write to the data mem the new value
+		st08 r0, r7				 	// write to LED
+		reti
+		nop
+		
+//wait:
+//		clr r8
+//inc:	
+//		cmp neq r8, r9
+//		br true >inc
+//		addi r8, 1
+//		ret
+//		nop
+//********** END OF SUBROUTINE ********************//
+//* Peripheral address declaration */
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:    .word 0x000F0004
+LCD_addr:		.word 0x000F0008
+stack_init:		.word 0x00000400
+
+//prio_status_mask	.word 0xFFFFFF03
+
+// Need to check
+axialmeter:		.word 0x00000801
+prevaxialstate:		.word 0x00000802
+
+//* CONSTANT declaration */
+enable:			.word 0x00080000
+//disable			.word 0x00000000
+delay40ms:		.word 0x145855
+left_con:		.word 0x10
+right_con:		.word 0x20
+up_con:			.word 0x08
+down_con:		.word 0x40
+value:			.word 0x01

@@ -1,0 +1,3 @@
+work	"../VHDL/ac97_controller.vhd"
+work	"../VHDL/ac_link.vhd"
+work	"../VHDL/peripherals.vhd"

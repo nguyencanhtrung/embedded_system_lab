@@ -1,0 +1,315 @@
+
+NET	clk   LOC="AG18" | IOSTANDARD=LVCMOS33;
+NET	clk TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50%;
+
+#reset button (active low)
+NET	rst	LOC="E7";
+NET	rst	PULLUP;
+NET	rst	TIG;
+
+# LED PINS
+NET led(0)				LOC="AG8"; #   | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+NET led(1)				LOC="AH8"; #   | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+NET led(2)				LOC="AH9"; #   | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+NET led(3)				LOC="AG10"; #  | IOSTANDARD = LVCMOS18; #LVDCI_18;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+NET led(4)				LOC="AH10"; #  | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+NET led(5)				LOC="AG11"; # | IOSTANDARD = LVCMOS18; #LVDCI_18;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+NET led(6)				LOC="AF11"; # | IOSTANDARD = LVCMOS18; #LVDCI_18;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+NET led(7)				LOC="AE11"; # | IOSTANDARD = LVCMOS18; #LVDCI_18;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+
+# LCD PINS
+NET enableLCD			LOC = AA5	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET rsLCD				LOC = V7		| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET rwLCD				LOC = W6		| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<7>			LOC = AD7	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<6>			LOC = AC7	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<5>			LOC = AC5	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<4>			LOC = AB6	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<3>			LOC = AC4	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<2>			LOC = AB5	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<1>			LOC = AB7	| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+NET dataLCD<0>			LOC = Y8		| IOSTANDARD=LVCMOS33 | TIG | PULLDOWN;
+
+# onBoard SWITCHES
+NET sw(0)			 	LOC = "J19"; # Bank = 3, Pin name = IO_L3N_GC_3,     Sch name = SW0
+NET sw(1) 				LOC = "L18"; # Bank = 3, Pin name = IO_L1N_CC_GC_3,   Sch name = SW1
+NET sw(2) 				LOC = "K18"; # Bank = 3, Pin name = IO_L3P_GC_3,      Sch name = SW2
+NET sw(3) 				LOC = "H18"; # Bank = 3, Pin name = IO_L0N_CC_GC_3,   Sch name = SW3
+NET sw(4) 				LOC = "H17"; # Bank = 3, Pin name = IO_L0P_CC_GC_3,   Sch name = SW4
+NET sw(5) 				LOC = "K17"; # Bank = 3, Pin name = IO_L1P_CC_GC_3,   Sch name = SW5
+NET sw(6) 				LOC = "G16"; # Bank = 3, Pin name = IO_L2N_GC_VRP_3,  Sch name = SW6
+NET sw(7) 				LOC = "G15"; # Bank = 3, Pin name = IO_L2P_GC_VRN_3,  Sch name = SW7
+
+# on Board BUTTONS
+NET "btn<0>"			LOC = "G6";  # BTN0
+NET "btn<1>"			LOC = "G7";  # BTN1
+NET "btn<2>"			LOC = "J21"; # BTN3 (joystick button)
+NET "btn<3>"			LOC = "E6";  # Joystick "up"
+NET "btn<4>"			LOC = "K19"; # Joystick "left"
+NET "btn<5>"			LOC = "J17"; # Joystick "right"
+NET "btn<6>"			LOC = "H15"; # Joystick "down"
+
+# Audio
+NET "ac97_bitclk" TNM="bitclk" 	| IOSTANDARD=LVCMOS33 | LOC = "AH17"; # Bank = 4,   Pin name = IO_L7P_GC_VRN_4,   Sch name = AUD-BIT-CLK
+NET "ac97_sdi"  LOC = "AE18" 		| IOSTANDARD=LVCMOS33;   					# Bank = 4,   Pin name = IO_L8N_CC_GC_4,    Sch name = AUD-SDI
+NET "ac97_sdo"  LOC = "AG20" 		| IOSTANDARD=LVCMOS33;    					# Bank = 4,   Pin name = IO_L4N_GC_VREF_4,  Sch name = AUD-SDO
+NET "ac97_sync" LOC = "J9" 		| IOSTANDARD=LVCMOS33;     					# Bank = 20,  Pin name = IO_L9N_CC_20,      Sch name = AUD-SYNC
+NET "ac97_rst"  LOC = "E12" 		| IOSTANDARD=LVCMOS33;    					# Bank = 20,  Pin name = IO_L17P_20,        Sch name = AUD-RESET
+TIMESPEC "TS_AC97_BITCLK"=PERIOD "bitclk" 81.4 ns HIGH 50%;
+
+##############################################################################################
+# Anything below is unlikely to be used
+##############################################################################################
+
+#Differential 200MHz CLKs
+#NET  clk_200_n            LOC="H13";# | IOSTANDARD = LVDS_25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  clk_200_p            LOC="J14";# | IOSTANDARD = LVDS_25;   # Bank 3, Vcco=2.5V, No DCI
+
+#NET  rxd1                 LOC="AG15" | IOSTANDARD = LVCMOS33;  # Bank 4, Vcco=3.3V, No DCI
+#NET  txd1                 LOC="AF19" | IOSTANDARD = LVCMOS33;  # Bank 4, Vcco=3.3V, No DCI
+#NET  rxd2                 LOC="AF18" | IOSTANDARD = LVCMOS33;   # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  txd2                 LOC="AG16" | IOSTANDARD = LVCMOS33;   # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+
+#NET ps2_keyb_clk		LOC="H9" | IOSTANDARD=LVCMOS33 | PULLUP | SLEW = SLOW | DRIVE = 2;
+#NET ps2_keyb_data		LOC="H10" | IOSTANDARD=LVCMOS33 | PULLUP | SLEW = SLOW | DRIVE = 2;
+
+#NET dvi_iic_scl			LOC="U8";    # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET dvi_iic_sda			LOC="V8";    # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+
+#NET tft_lcd_data(0)	LOC="G10";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(1)	LOC="G8";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(2)	LOC="B12";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(3)	LOC="D12";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(4)	LOC="C12";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(5)	LOC="D11";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(6)	LOC="F10";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(7)	LOC="D10";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(8)	LOC="E9";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(9)	LOC="F9";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(10)	LOC="E8";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET tft_lcd_data(11)	LOC="F8";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistor
+#NET tft_lcd_clk_p		LOC="K11";
+#NET tft_lcd_clk_n		LOC="J11";
+#NET tft_lcd_hsync		LOC="H8";
+#NET tft_lcd_vsync		LOC="F13";
+#NET tft_lcd_de			LOC="V10";
+#NET tft_lcd_reset_b	LOC="V9";
+
+#NET  ps2_mouse_clk        LOC="R27";# | IOSTANDARD = LVCMOS18; #LVDCI_18;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ps2_mouse_data       LOC="U26";# | IOSTANDARD = LVCMOS18; #LVDCI_18;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+
+#NET  phy_col              LOC="K6";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_crs              LOC="L5";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  PHY_INT              LOC="T6";   # Bank 3, Vcco=2.5V, No DCI      
+#NET  phy_mii_clk          LOC="N5";# | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_mii_data         LOC="U10";# | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_rst_n            LOC="L4";# | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_rx_clk           LOC="L19" | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_dv               LOC="N8";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_gtx_clk          LOC="J20"| IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_rx_data(0)       LOC="N7";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(1)       LOC="R6";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(2)       LOC="P6";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(3)       LOC="P5";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(4)       LOC="M7";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(5)       LOC="M6";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(6)       LOC="M5";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_data(7)       LOC="L6";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_rx_er            LOC="P7";# | IOSTANDARD = LVCMOS33;   # Bank 11, Vcco=2.5V or 3.3V user selectable by J20
+#NET  phy_tx_clk           LOC="J16" | IOSTANDARD = LVCMOS25;   # Bank 3, Vcco=2.5V, No DCI
+#NET  phy_tx_en            LOC="T10";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(0)       LOC="J5";# | IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(1)       LOC="G5";# | IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(2)       LOC="F5";# | IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(3)       LOC="R7";# | IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(4)       LOC="T8" ;#| IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(5)       LOC="R11" ;#| IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(6)       LOC="T11" ;#| IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_data(7)       LOC="U7" ;#| IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  phy_tx_er            LOC="R8" ;#| IOSTANDARD = LVDCI_33 | FAST | DRIVE=8;   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+
+#DRAM PINS
+#NET  ddr_ad(0)            LOC="L30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(1)            LOC="M30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(2)            LOC="N29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(3)            LOC="P29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(4)            LOC="K31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(5)            LOC="L31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(6)            LOC="P31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(7)            LOC="P30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(8)            LOC="M31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(9)            LOC="R28";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(10)           LOC="J31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(11)           LOC="R29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(12)           LOC="T31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ad(13)           LOC="H29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_ba(0)            LOC="G31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ba(1)            LOC="J30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_ba(2)            LOC="R31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_casb             LOC="E31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_rasb             LOC="H30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_cke(0)           LOC="T28";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_cke(1)           LOC="U30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_clkb(0)          LOC="AJ29";# | IOSTANDARD = SSTL18_I; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_clkb(1)          LOC="F28";# | IOSTANDARD = SSTL18_I; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_clk(0)           LOC="AK29";# | IOSTANDARD = SSTL18_I; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_clk(1)           LOC="E28";# | IOSTANDARD = SSTL18_I; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_csb(0)           LOC="L29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_csb(1)           LOC="J29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_dq(0)            LOC="AF30";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(1)            LOC="AK31";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(2)            LOC="AF31";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(3)            LOC="AD30";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(4)            LOC="AJ30";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(5)            LOC="AF29";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(6)            LOC="AD29";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(7)            LOC="AE29";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(8)            LOC="AH27";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(9)            LOC="AF28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(10)           LOC="AH28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(11)           LOC="AA28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(12)           LOC="AG25";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(13)           LOC="AJ26";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(14)           LOC="AG28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(15)           LOC="AB28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(16)           LOC="AC28";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(17)           LOC="AB25";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(18)           LOC="AC27";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(19)           LOC="AA26";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(20)           LOC="AB26";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(21)           LOC="AA24";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(22)           LOC="AB27";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(23)           LOC="AA25";# | IOSTANDARD = SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(24)           LOC="AC29";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(25)           LOC="AB30";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(26)           LOC="W31";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(27)           LOC="V30";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(28)           LOC="AC30";# | IOSTANDARD = SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(29)           LOC="W29";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(30)           LOC="V27";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(31)           LOC="W27";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(32)           LOC="V29";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(33)           LOC="Y27";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(34)           LOC="Y26";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(35)           LOC="W24";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(36)           LOC="V28";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(37)           LOC="W25";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(38)           LOC="W26";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(39)           LOC="V24";# | IOSTANDARD = SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(40)           LOC="R24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(41)           LOC="P25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(42)           LOC="N24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(43)           LOC="P26";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(44)           LOC="T24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(45)           LOC="N25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(46)           LOC="P27";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(47)           LOC="N28";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(48)           LOC="M28";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(49)           LOC="L28";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(50)           LOC="F25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(51)           LOC="H25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(52)           LOC="K27";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(53)           LOC="K28";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(54)           LOC="H24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(55)           LOC="G26";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(56)           LOC="G25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(57)           LOC="M26";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(58)           LOC="J24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(59)           LOC="L26";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(60)           LOC="J27";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(61)           LOC="M25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(62)           LOC="L25";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dq(63)           LOC="L24";# | IOSTANDARD = SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_dm(0)            LOC="AJ31";# | IOSTANDARD = SSTL18_I;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(1)            LOC="AE28";# | IOSTANDARD = SSTL18_I;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(2)            LOC="Y24";# | IOSTANDARD = SSTL18_I;   # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(3)            LOC="Y31";# | IOSTANDARD = SSTL18_I;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(4)            LOC="V25";# | IOSTANDARD = SSTL18_I;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(5)            LOC="P24";# | IOSTANDARD = SSTL18_I;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(6)            LOC="F26";# | IOSTANDARD = SSTL18_I;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dm(7)            LOC="J25";# | IOSTANDARD = SSTL18_I;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_dqsn(0)          LOC="AA30";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(0)          LOC="AA29";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(1)          LOC="AK27";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(1)          LOC="AK28";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(2)          LOC="AJ27";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(2)          LOC="AK26";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(3)          LOC="AA31";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(3)          LOC="AB31";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(4)          LOC="Y29";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(4)          LOC="Y28";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(5)          LOC="E27";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(5)          LOC="E26";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(6)          LOC="G28";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(6)          LOC="H28";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsn(7)          LOC="H27";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_dqsp(7)          LOC="G27";# | IOSTANDARD = DIFF_SSTL18_II; #DIFF_SSTL18_II;   # Bank 19, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_odt(0)           LOC="F31";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  ddr_odt(1)           LOC="F30";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  DDR2_SCL             LOC="E29";   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  DDR2_SDA             LOC="F29";   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#
+#NET  ddr_web              LOC="K29";# | IOSTANDARD = SSTL18_I;   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+
+#NET  DVI_D0               LOC="G10";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D1               LOC="G8";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D2               LOC="B12";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D3               LOC="D12";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D4               LOC="C12";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D5               LOC="D11";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D6               LOC="F10";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D7               LOC="D10";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D8               LOC="E7";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D9               LOC="F9";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D10              LOC="E8";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_D11              LOC="F8";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_DE               LOC="V10";   # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+##NET  DVI_GPIO1            LOC="N30";   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  DVI_H                LOC="H8";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_RESET_B          LOC="V9";   # Bank 18, Vcco=3.3V, No DCI
+#NET  DVI_V                LOC="F13";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_XCLK_N           LOC="J11";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  DVI_XCLK_P           LOC="K11";  # Bank 22, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  FAN_ALERT_B          LOC="T30";   # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
+
+#NET  flash_adv_n          LOC="AF21";   # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors (FLASH_ADV_B)
+#NET  FLASH_AUDIO_RESET_B  LOC="AG17";  # Bank 4, Vcco=3.3V, No DCI
+#NET  flash_ce             LOC="AE14";  # Bank 2, Vcco=3.3V
+#NET  FLASH_CLK            LOC="AG21";    # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  flash_oen		  LOC="AF14";  # Bank 2, Vcco=3.3V (FLASH_OE_B)
+#NET  FLASH_WAIT           LOC="AH18";   # Bank 20, Vcco=3.3V, DCI using 49.9 ohm resistors
+#NET  FPGA_AVDD            LOC="T18";   # Bank 0, Vcco=3.3V
+#NET  FPGA_CCLK-R          LOC="N15";   # Bank 0, Vcco=3.3V
+#NET  FPGA_CS_B            LOC="N22";   # Bank 0, Vcco=3.3V
+#NET  FPGA_CS0_B           LOC="AF21";  # Bank 2, Vcco=3.3V
+#NET  FPGA_DIFF_CLK_OUT_N  LOC="J21";   # Bank 3, Vcco=2.5V, No DCI
+#NET  FPGA_DIFF_CLK_OUT_P  LOC="J20";   # Bank 3, Vcco=2.5V, No DCI
+#NET  FPGA_DIN             LOC="P15";   # Bank 0, Vcco=3.3V
+#NET  FPGA_DONE            LOC="M15";   # Bank 0, Vcco=3.3V
+#NET  FPGA_DOUT_BUSY       LOC="AD15";  # Bank 0, Vcco=3.3V
+#NET  FPGA_DX_N            LOC="W17";   # Bank 0, Vcco=3.3V
+#NET  FPGA_DX_P            LOC="W18";   # Bank 0, Vcco=3.3V
+#NET  FPGA_EXP_TCK         LOC="AB15";  # Bank 0, Vcco=3.3V
+#NET  FPGA_EXP_TMS         LOC="AC14";  # Bank 0, Vcco=3.3V
+#NET  FPGA_HSWAPEN         LOC="M23";   # Bank 0, Vcco=3.3V
+#NET  FPGA_INIT_B          LOC="N14";   # Bank 0, Vcco=3.3V
+#NET  FPGA_M0              LOC="AD21";  # Bank 0, Vcco=3.3V
+#NET  FPGA_M1              LOC="AC22";  # Bank 0, Vcco=3.3V
+#NET  FPGA_M2              LOC="AD22";  # Bank 0, Vcco=3.3V
+#NET  FPGA_PROG_B          LOC="M22";   # Bank 0, Vcco=3.3V
+#NET  FPGA_RDWR_B          LOC="N23";   # Bank 0, Vcco=3.3V
+#NET  FPGA_ROTARY_INCA     LOC="AH30";  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  FPGA_ROTARY_INCB     LOC="AG30";  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors
+#NET  FPGA_ROTARY_PUSH     LOC="AH29";  # Bank 17, Vcco=1.8V, DCI using 49.9 ohm resistors

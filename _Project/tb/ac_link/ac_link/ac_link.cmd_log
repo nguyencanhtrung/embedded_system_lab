@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/ac_link.xst" -ofn "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/ac_link.syr" 

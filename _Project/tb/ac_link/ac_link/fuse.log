@@ -1,0 +1,23 @@
+Running: /import/software/Xilinx/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_isim_beh.exe -prj /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_beh.prj work.tb_ac_link 
+ISim O.61xd (signature 0xb4d1ced7)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/ac_link.vhd" into library work
+Parsing VHDL file "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 72848 KB
+Fuse CPU Usage: 110 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity ac_link [\ac_link(16)\]
+Compiling architecture behavior of entity tb_ac_link
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_isim_beh.exe
+Fuse Memory Usage: 1168932 KB
+Fuse CPU Usage: 230 ms
+GCC CPU Usage: 340 ms

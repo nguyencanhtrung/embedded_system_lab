@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_isim_beh.exe" -prj "/import/lab/esylab/esylab_06/Trung/project/ac_link/ac_link/tb_ac_link_beh.prj" "work.tb_ac_link" 

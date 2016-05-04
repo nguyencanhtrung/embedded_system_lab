@@ -1,0 +1,136 @@
+reset:
+	br always >main
+	nop
+hardfault:
+	br >hardfault_handler
+	nop
+memfault:
+	br >memfault_handler
+	nop
+
+// ******** END IRQ TABLE **********//
+
+//********** MAIN PROGRAM **********
+//Explanation of used registers 
+//*r0 	: 	LED_addr
+//*r1	: 	LCD_addr
+//*r2	:	SW_BTN_addr
+//*r3	:	mask/ general purpose
+//*r4	:	
+//*r5	:	addr axialmeter     
+//*r6	:	addr prevaxialstate 
+//*r7	:	value of axialstate     (8 bits)
+//*r8	:	value of prevaxialstate (8 bits)
+//*r9	:	general purpose (delay)
+//*r10	:	general purpose
+//*r11	:	general purpose (working in interrupt handler)
+//--------------
+//*r12	:	stack pointer
+//*r13	:   	link register  -- set by call instruction
+//*r14	:	status register
+//*r15	:	program counter
+
+main:
+	// *** INITIALISATION PROCESS ***
+	ldr r0, >LED_addr	// address của LED được store vào reg r0
+	ldr r1, >LCD_addr	
+	ldr r2, >SW_BTN_addr	// load addr of BTN to r2
+	ldr r3, >AU_addr
+	
+	clr r4
+	addi r4, 0x08			// ENABLE interrupt for SW_BTN by software (4)
+	st08 r2, r4		//edited from r0		// Load content of r3 into *r2 ; 
+						// HW point of view: It will be loaded to data(7 downto 0);
+
+	clr r4
+	addi r4, 1
+	call >wait1s		// Indicator 1   *
+
+	ldr sp, >stack_init			// Initialize the stack pointer  (1)
+	clr sr					// Set runtime priority to zero	 (2)
+	
+
+						// Assign data memory location to axialmeter and prevaxialstate (3)
+	clr r5
+	ldr r5, >axialmeter			// load addr of value to r5
+	clr r6
+	ldr r6, >prevaxialstate		// load addr of state to r6
+	
+	clr r4
+	addi r4, 4		// Indicator 3   *
+	call >wait1s
+	
+	
+				
+	clr r4
+	addi r4, 8		// Indicator 4   *
+	call >wait1s
+								
+	clr r9					// Initialize value for axial and pre-value (5)
+	st32 r5, r9				// Initial value of axialmeter is 0x00
+	nop
+	clr r9
+	st32 r6, r9				// Initial value of axialmeter is 0x00
+	
+	clr r4
+	addi r4, 16			
+	call >wait1s		// Indicator 5   *
+	// **** DONE INITIALISATION ****
+	
+	clr r10
+	addi r10, 40	
+
+	clr r4		
+	call >wait1s		// Indicator 6 - DONE   *
+	
+	// **** Periodically check value of axilmeter, update to LED (period = 40 ms)
+check_axial:
+//	wait for 1s
+	clr r4
+	call >wait1s	
+	st08 r3, r10
+	addi r10, 1
+	br >check_axial
+	nop
+// ********* ENDING OF MAIN PROGRAM **********//
+
+// ********* Interrupt Handler ****************
+hardfault_handler:
+           		reti
+           		nop
+
+memfault_handler:
+           		reti
+		   	nop
+
+//-------------------------		
+wait1s:
+		st08 r0, r4				// Indicator
+		clr r9
+		ldr r9, >delay1s		// load delay value
+		clr r8
+inc:	
+		cmp neq r8, r9
+		br true >inc
+		addi r8, 1
+		ret
+		nop
+//-------------------------		
+// ********* END OF SUBROUTINE ********
+.align
+LED_addr:		.word 0x000F0000
+SW_BTN_addr:    	.word 0x000F0004
+LCD_addr:		.word 0x000F0008
+AU_addr:		.word 0x000F000C
+stack_init:		.word 0x0000041F
+and_mask:		.word 0x000000FF		//edited
+
+// Need to check
+axialmeter:		.word 0x00000401
+prevaxialstate:		.word 0x0000040A
+
+//* CONSTANT declaration */
+delay40ms:		.word 0x145855
+delay1s:		.word 0x1FCA055
+mask:			.word 0x0000007F
+

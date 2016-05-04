@@ -1,0 +1,25 @@
+V3 12
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd 2016/01/08.18:58:25 O.61xd
+EN work/ac97_controller 1452276630 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/lt16soc_peripherals 1452276627
+AR work/ac97_controller/Behavioral 1452276631 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac97_controller.vhd \
+      EN work/ac97_controller 1452276630 CP ac_link
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd 2016/01/08.18:47:42 O.61xd
+EN work/ac_link 1452276628 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/lt16soc_peripherals 1452276627
+AR work/ac_link/Behavioral 1452276629 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/ac_link.vhd \
+      EN work/ac_link 1452276628
+FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd 2016/01/08.18:56:47 O.61xd
+PH work/lt16soc_peripherals 1452276626 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 CD ac_link \
+      CD ac97_controller
+PB work/lt16soc_peripherals 1452276627 \
+      FL /import/lab/esylab/esylab_06/Trung/project/ac_link/ac_97_controller/VHDL/peripherals.vhd \
+      PH work/lt16soc_peripherals 1452276626
