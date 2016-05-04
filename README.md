@@ -15,5 +15,5 @@ Contents
 ####3. Final Project
   
 ####4. Team members
-  Trung C. Nguyen
-  Waseem Hassan
+  [Trung C. Nguyen](nguyencanhtrung@me.com)
+  _Waseem Hassan_
