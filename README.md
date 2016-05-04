@@ -1,6 +1,6 @@
 Embedded System Laboratory
 Contents
-1. Description
+>1. Description
 2. Assignments
 3. Final Project
 4. Team members
