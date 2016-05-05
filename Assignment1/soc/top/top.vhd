@@ -1,5 +1,12 @@
 -- See the file "LICENSE" for the full license governing this code. --
-
+-- TU Kaiserslautern
+-- Student: Trung C. Nguyen
+-- Revision:
+--		Assignment 2: 	changing slv_mask_vector:= b"1111_0000_0000_0001";
+--							Originally := b"1110_0000_0000_0001";
+--				Adding swdev: wb_switch
+--				Adding ports: sw and btn
+----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
@@ -14,7 +21,7 @@ use work.lt16soc_peripherals.all;
 
 entity lt16soc_top is
 generic(
-	programfilename : string := "/import/lab/esylab/esylab_06/ise/programs/blinky.ram" -- see "Synthesize XST" process properties for actual value ("-generics" in .xst file)!
+	programfilename : string := "../Assignment1/blinky.ram" -- see "Synthesize XST" process properties for actual value ("-generics" in .xst file)!
 );
 port(
 	-- clock signal
@@ -22,7 +29,12 @@ port(
 	-- external reset button
 	rst		: in std_logic;
 	
-	led		: out std_logic_vector(7 downto 0)
+	led		: out std_logic_vector(7 downto 0);
+	
+	-- assignment 2
+	sw			: in	std_logic_vector(7 downto 0);
+	btn		: in 	std_logic_vector(6 downto 0)
+	-- end of assignment 2
 );
 end entity lt16soc_top;
 
@@ -33,8 +45,9 @@ architecture RTL of lt16soc_top is
 	--//////////////////////////////////////////////////////
 
 	signal rst_gen	: std_logic;
-
-	constant slv_mask_vector : std_logic_vector(0 to NWBSLV-1) := b"1110_0000_0000_0001";
+		-- assignment 2	
+	constant slv_mask_vector : std_logic_vector(0 to NWBSLV-1) := b"1111_0000_0000_0001";
+		-- end of assignment 2	
 	constant mst_mask_vector : std_logic_vector(0 to NWBMST-1) := b"1000";
 
 	signal slvo	: wb_slv_out_vector := (others=> wbs_out_none);
@@ -181,5 +194,12 @@ begin
 	port map(
 		clk,rst_gen,led,slvi(CFG_LED),slvo(CFG_LED)
 	);
-
+		
+		-- assignment 2
+	swdev	: wb_switch
+	generic map(
+				CFG_BADR_SW,CFG_MADR_SW
+				)
+   port map( 	clk, rst, sw, btn, slvi(CFG_SW), slvo(CFG_SW));
+		-- end of assignment 2
 end architecture RTL;

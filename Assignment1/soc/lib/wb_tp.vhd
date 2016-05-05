@@ -1175,9 +1175,9 @@ package body wb_tp is
 		msto		<= wbm_out_none;
 		msto.cyc	<= '1';
 		msto.stb	<= '1';
-		msto.we		<= '0';
+		msto.we	<= '0';
 		msto.sel	<= sel;
-		msto.adr	<= adr;
+		msto.adr	<= adr(31 downto 2);
 
 		wait until rising_edge(clk);
 		wait until slvo.ack='1' for 1 ps;

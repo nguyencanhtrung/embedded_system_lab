@@ -1,0 +1,1633 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: lt16soc_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lt16soc_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lt16soc_top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : lt16soc_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/lt16x32_global.vhd" into library work
+Parsing package <lt16x32_global>.
+Parsing package body <lt16x32_global>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/lt16x32_internal.vhd" into library work
+Parsing package <lt16x32_internal>.
+Parsing package body <lt16x32_internal>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/lib/wishbone.vhd" into library work
+Parsing package <wishbone>.
+Parsing package body <wishbone>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/registerfile.vhd" into library work
+Parsing entity <registerfile>.
+Parsing architecture <RTL> of entity <registerfile>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_shadow.vhd" into library work
+Parsing entity <decoder_shadow>.
+Parsing architecture <RTL> of entity <decoder_shadow>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_pre.vhd" into library work
+Parsing entity <decoder_pre>.
+Parsing architecture <RTL> of entity <decoder_pre>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_fsm.vhd" into library work
+Parsing entity <decoder_fsm>.
+Parsing architecture <RTL> of entity <decoder_fsm>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_32bit.vhd" into library work
+Parsing entity <decoder_32bit>.
+Parsing architecture <RTL> of entity <decoder_32bit>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_16bit.vhd" into library work
+Parsing entity <decoder_16bit>.
+Parsing architecture <RTL> of entity <decoder_16bit>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <RTL> of entity <alu>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/lib/config.vhd" into library work
+Parsing package <config>.
+Parsing package body <config>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/programcounter.vhd" into library work
+Parsing entity <programcounter>.
+Parsing architecture <RTL> of entity <programcounter>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder.vhd" into library work
+Parsing entity <decoder>.
+Parsing architecture <RTL> of entity <decoder>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/datapath.vhd" into library work
+Parsing entity <datapath>.
+Parsing architecture <RTL> of entity <datapath>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/controlpath.vhd" into library work
+Parsing entity <controlpath>.
+Parsing architecture <RTL> of entity <controlpath>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memdiv.vhd" into library work
+Parsing entity <memdiv>.
+Parsing architecture <RTL> of entity <memdiv>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/mem2wb.vhd" into library work
+Parsing entity <mem2wb>.
+Parsing architecture <Behavioral> of entity <mem2wb>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/blockram.vhd" into library work
+Parsing entity <blockram>.
+Parsing architecture <syn> of entity <blockram>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/core2wb.vhd" into library work
+Parsing entity <core2wb>.
+Parsing architecture <Behavioral> of entity <core2wb>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/core.vhd" into library work
+Parsing entity <core>.
+Parsing architecture <RTL> of entity <core>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment2/switches.vhd" into library work
+Parsing entity <wb_switch>.
+Parsing architecture <Behavioral> of entity <wb_switch>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd" into library work
+Parsing entity <wb_intercon>.
+Parsing architecture <RTL> of entity <wb_intercon>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/peripheral/peripherals.vhd" into library work
+Parsing package <lt16soc_peripherals>.
+Parsing package body <lt16soc_peripherals>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/peripheral/led.vhd" into library work
+Parsing entity <wb_led>.
+Parsing architecture <Behavioral> of entity <wb_led>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memwrapper.vhd" into library work
+Parsing entity <memwrapper>.
+Parsing architecture <RTL> of entity <memwrapper>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memories.vhd" into library work
+Parsing package <lt16soc_memories>.
+Parsing package body <lt16soc_memories>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/dmem.vhd" into library work
+Parsing entity <wb_dmem>.
+Parsing architecture <Behavioral> of entity <wb_dmem>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/irq_controller.vhd" into library work
+Parsing entity <irq_controller>.
+Parsing architecture <RTL> of entity <irq_controller>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/core/corewrapper.vhd" into library work
+Parsing entity <corewrapper>.
+Parsing architecture <RTL> of entity <corewrapper>.
+Parsing VHDL file "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" into library work
+Parsing entity <lt16soc_top>.
+Parsing architecture <RTL> of entity <lt16soc_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <lt16soc_top> (architecture <RTL>) with generics from library <work>.
+
+Elaborating entity <corewrapper> (architecture <RTL>) from library <work>.
+
+Elaborating entity <core> (architecture <RTL>) from library <work>.
+
+Elaborating entity <datapath> (architecture <RTL>) from library <work>.
+
+Elaborating entity <registerfile> (architecture <RTL>) from library <work>.
+
+Elaborating entity <alu> (architecture <RTL>) from library <work>.
+
+Elaborating entity <controlpath> (architecture <RTL>) from library <work>.
+
+Elaborating entity <decoder> (architecture <RTL>) from library <work>.
+
+Elaborating entity <decoder_pre> (architecture <RTL>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_pre.vhd" Line 53. Case statement is complete. others clause is never selected
+
+Elaborating entity <decoder_fsm> (architecture <RTL>) from library <work>.
+
+Elaborating entity <decoder_16bit> (architecture <RTL>) from library <work>.
+
+Elaborating entity <decoder_32bit> (architecture <RTL>) from library <work>.
+
+Elaborating entity <decoder_shadow> (architecture <RTL>) from library <work>.
+
+Elaborating entity <programcounter> (architecture <RTL>) from library <work>.
+
+Elaborating entity <core2wb> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/ctnguyen/Works/ESY/Assignment1/soc/core/core2wb.vhd" Line 36: rst should be on the sensitivity list of the process
+
+Elaborating entity <irq_controller> (architecture <RTL>) from library <work>.
+
+Elaborating entity <wb_intercon> (architecture <RTL>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd" Line 70: Assignment to ssel_idx ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd" Line 125: Assignment to mgnt ignored, since the identifier is never used
+
+Elaborating entity <memwrapper> (architecture <RTL>) with generics from library <work>.
+
+Elaborating entity <memdiv> (architecture <RTL>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memdiv.vhd" Line 205. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memdiv.vhd" Line 226. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memdiv.vhd" Line 300. Case statement is complete. others clause is never selected
+
+Elaborating entity <mem2wb> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memwrapper.vhd" Line 132: rst should be on the sensitivity list of the process
+
+Elaborating entity <wb_dmem> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <blockram> (architecture <syn>) from library <work>.
+
+Elaborating entity <wb_led> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <wb_switch> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 53: Net <slvo[15]_dat[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 54: Net <msto[3]_adr[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 65: Net <irq_lines[15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <lt16soc_top>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd".
+        programfilename = "../Assignment1/blinky.ram"
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[3]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[2]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[1]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_adr> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_dat> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_sel> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_cti> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_bte> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[3]_ack> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[2]_ack> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <msti[1]_ack> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[15]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[14]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[13]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[12]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[11]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[10]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[9]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[8]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[7]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[6]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[5]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_we> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_stb> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" line 152: Output port <slvi[4]_cyc> of the instance <wbicn_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'slvo[15]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[15]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[14]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[14]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[13]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[13]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[12]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[12]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[11]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[11]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[10]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[10]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[9]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[9]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[8]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[8]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[7]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[7]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[6]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[6]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[5]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[5]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'slvo[4]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'slvo[4]_wbcfg', unconnected in block 'lt16soc_top', is tied to its initial value (1111111111111111111111111111111111111111111111111111111111111111).
+WARNING:Xst:2935 - Signal 'msto[3]_adr', unconnected in block 'lt16soc_top', is tied to its initial value (000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[3]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[3]_sel', unconnected in block 'lt16soc_top', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'msto[3]_cti', unconnected in block 'lt16soc_top', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'msto[3]_bte', unconnected in block 'lt16soc_top', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'msto[2]_adr', unconnected in block 'lt16soc_top', is tied to its initial value (000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[2]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[2]_sel', unconnected in block 'lt16soc_top', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'msto[2]_cti', unconnected in block 'lt16soc_top', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'msto[2]_bte', unconnected in block 'lt16soc_top', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'msto[1]_adr', unconnected in block 'lt16soc_top', is tied to its initial value (000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[1]_dat', unconnected in block 'lt16soc_top', is tied to its initial value (00000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'msto[1]_sel', unconnected in block 'lt16soc_top', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'msto[1]_cti', unconnected in block 'lt16soc_top', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'msto[1]_bte', unconnected in block 'lt16soc_top', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'irq_lines<15:3>', unconnected in block 'lt16soc_top', is tied to its initial value (0000000000000).
+WARNING:Xst:2935 - Signal 'irq_lines<0>', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[15]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[14]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[13]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[12]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[11]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[10]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[9]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[8]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[7]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[6]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[5]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'slvo[4]_ack', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[3]_we', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[3]_stb', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[3]_cyc', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[2]_we', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[2]_stb', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[2]_cyc', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[1]_we', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[1]_stb', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'msto[1]_cyc', unconnected in block 'lt16soc_top', is tied to its initial value (0).
+    Summary:
+	no macro.
+Unit <lt16soc_top> synthesized.
+
+Synthesizing Unit <corewrapper>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/corewrapper.vhd".
+    Summary:
+	no macro.
+Unit <corewrapper> synthesized.
+
+Synthesizing Unit <core>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/core.vhd".
+    Found 1-bit register for signal <imem_dec_signal_instruction_halfword_select>.
+    Found 4x2-bit Read Only RAM for signal <out_dmem_read_size>
+    Found 4x2-bit Read Only RAM for signal <out_dmem_write_size>
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <core> synthesized.
+
+Synthesizing Unit <datapath>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/datapath.vhd".
+    Found 32-bit register for signal <alu_result_s3>.
+    Found 1-bit register for signal <alu_tflag_s3>.
+    Found 1-bit register for signal <alu_ovfflag_s3>.
+    Found 4-bit register for signal <register_number_a_s2>.
+    Found 4-bit register for signal <register_number_b_s2>.
+    Found 32-bit register for signal <regfile_reg_a_s3>.
+    Found 32-bit register for signal <regfile_reg_b_s3>.
+    Found 32-bit register for signal <immediate_signext_s3>.
+    Found 32-bit register for signal <pc_value_s2>.
+    Found 32-bit adder for signal <ldr_address> created at line 182.
+    Found 32-bit 3-to-1 multiplexer for signal <reg_write_data> created at line 210.
+    Found 32-bit 3-to-1 multiplexer for signal <out_dmem_read_addr> created at line 223.
+    Found 4-bit comparator equal for signal <in_cp_s3_register_write_number[3]_register_number_a_s2[3]_equal_19_o> created at line 236
+    Found 4-bit comparator equal for signal <in_cp_s3_register_write_number[3]_register_number_b_s2[3]_equal_21_o> created at line 247
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 170 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <datapath> synthesized.
+
+Synthesizing Unit <registerfile>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/registerfile.vhd".
+    Found 32-bit register for signal <b_out>.
+    Found 1-bit register for signal <ovf_flag>.
+    Found 1-bit register for signal <t_flag>.
+    Found 4-bit register for signal <runtime_priority_internal>.
+    Found 32-bit register for signal <a_out>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <reg_array>, simulation mismatch.
+    Found 14x32-bit dual-port RAM <Mram_reg_array> for signal <reg_array>.
+    Found 4-bit comparator greater for signal <n0009> created at line 113
+    Found 4-bit comparator equal for signal <a_num[3]_write_num[3]_equal_3_o> created at line 116
+    Found 4-bit comparator greater for signal <n0023> created at line 146
+    Found 4-bit comparator equal for signal <b_num[3]_write_num[3]_equal_15_o> created at line 148
+    Found 4-bit comparator greater for signal <n0039> created at line 188
+    Summary:
+	inferred   2 RAM(s).
+	inferred  70 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <registerfile> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/alu.vhd".
+    Found 32-bit adder for signal <in_a[31]_in_b[31]_add_0_OUT> created at line 47.
+    Found 5-bit adder for signal <n0048> created at line 71.
+    Found 32-bit subtractor for signal <in_a[31]_in_b[31]_sub_2_OUT<31:0>> created at line 53.
+    Found 32-bit shifter logical left for signal <in_a[31]_BUS_0002_shift_left_6_OUT> created at line 68
+    Found 32-bit shifter logical right for signal <in_a[31]_BUS_0003_shift_right_8_OUT> created at line 71
+    Found 32-bit comparator equal for signal <in_a[31]_in_b[31]_equal_10_o> created at line 75
+    Found 32-bit comparator greater for signal <n0025> created at line 89
+    Found 32-bit comparator greater for signal <in_a[31]_in_b[31]_LessThan_13_o> created at line 96
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  20 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <controlpath>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/controlpath.vhd".
+    Found 2-bit register for signal <in_dec_2_s2_dmem_read_addr_select>.
+    Found 1-bit register for signal <in_dec_2_s2_alu_input_data_select>.
+    Found 4-bit register for signal <in_dec_2_s2_alu_mode>.
+    Found 2-bit register for signal <in_dec_2_s2_dmem_read_size>.
+    Found 1-bit register for signal <in_dec_2_s2_dmem_read_en>.
+    Found 2-bit register for signal <in_dec_2_s2_pc_summand_select>.
+    Found 1-bit register for signal <in_dec_2_s2_pc_mode_select>.
+    Found 1-bit register for signal <in_dec_2_s2_pc_condition>.
+    Found 1-bit register for signal <in_dec_3_s2_dmem_write_data_select>.
+    Found 2-bit register for signal <in_dec_3_s2_register_write_data_select>.
+    Found 4-bit register for signal <in_dec_3_s2_register_write_number>.
+    Found 1-bit register for signal <in_dec_3_s2_register_write_enable>.
+    Found 2-bit register for signal <in_dec_3_s2_register_write_size>.
+    Found 1-bit register for signal <in_dec_3_s2_tflag_write_enable>.
+    Found 1-bit register for signal <in_dec_3_s2_tflag_write_data_select>.
+    Found 1-bit register for signal <in_dec_3_s2_ovfflag_write_enable>.
+    Found 2-bit register for signal <in_dec_3_s2_dmem_write_size>.
+    Found 1-bit register for signal <in_dec_3_s2_dmem_write_en>.
+    Found 1-bit register for signal <in_dec_3_s3_dmem_write_data_select>.
+    Found 2-bit register for signal <in_dec_3_s3_register_write_data_select>.
+    Found 4-bit register for signal <in_dec_3_s3_register_write_number>.
+    Found 1-bit register for signal <in_dec_3_s3_register_write_enable>.
+    Found 2-bit register for signal <in_dec_3_s3_register_write_size>.
+    Found 1-bit register for signal <in_dec_3_s3_tflag_write_enable>.
+    Found 1-bit register for signal <in_dec_3_s3_tflag_write_data_select>.
+    Found 1-bit register for signal <in_dec_3_s3_ovfflag_write_enable>.
+    Found 2-bit register for signal <in_dec_3_s3_dmem_write_size>.
+    Found 1-bit register for signal <in_dec_3_s3_dmem_write_en>.
+    Found 8-bit register for signal <in_dec_2_s2_immediate>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <controlpath> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder.vhd".
+    Found 4-bit 3-to-1 multiplexer for signal <out_cp_s1_register_read_number_a> created at line 117.
+    Found 4-bit 3-to-1 multiplexer for signal <out_cp_s1_register_read_number_b> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s1_instruction_width> created at line 117.
+    Found 8-bit 3-to-1 multiplexer for signal <out_cp_s2_immediate> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s2_dmem_read_addr_select> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s2_alu_input_data_select> created at line 117.
+    Found 4-bit 3-to-1 multiplexer for signal <out_cp_s2_alu_mode> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s2_dmem_read_size> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s2_dmem_read_en> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s2_pc_summand_select> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s2_pc_mode_select> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s2_pc_condition> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_dmem_write_data_select> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s3_register_write_data_select> created at line 117.
+    Found 4-bit 3-to-1 multiplexer for signal <out_cp_s3_register_write_number> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_register_write_enable> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s3_register_write_size> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_tflag_write_enable> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_tflag_write_data_select> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_ovfflag_write_enable> created at line 117.
+    Found 2-bit 3-to-1 multiplexer for signal <out_cp_s3_dmem_write_size> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_s3_dmem_write_en> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <out_cp_hardfault> created at line 117.
+    Summary:
+	inferred  23 Multiplexer(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <decoder_pre>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_pre.vhd".
+    Summary:
+	inferred  10 Multiplexer(s).
+Unit <decoder_pre> synthesized.
+
+Synthesizing Unit <decoder_fsm>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_fsm.vhd".
+    Found 32-bit register for signal <multicycleinstruction>.
+    Found 4-bit register for signal <state>.
+INFO:Xst:1799 - State branchdelay is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 39                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | reset                                          |
+    | Power Up State     | normal                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8x1-bit Read Only RAM for signal <out_irq_ack>
+    Found 4-bit comparator greater for signal <in_dp_runtime_priority[3]_in_irq_priority[3]_LessThan_22_o> created at line 217
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  28 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <decoder_fsm> synthesized.
+
+Synthesizing Unit <decoder_16bit>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_16bit.vhd".
+    Found 8x1-bit Read Only RAM for signal <output_s3_tflag_write_enable>
+    Found 16x4-bit Read Only RAM for signal <_n0145>
+    Summary:
+	inferred   2 RAM(s).
+	inferred  44 Multiplexer(s).
+Unit <decoder_16bit> synthesized.
+
+Synthesizing Unit <decoder_32bit>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_32bit.vhd".
+WARNING:Xst:647 - Input <input_instruction> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <decoder_32bit> synthesized.
+
+Synthesizing Unit <decoder_shadow>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/decoder_shadow.vhd".
+WARNING:Xst:647 - Input <input_instruction<27:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16x18-bit Read Only RAM for signal <_n0054>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Multiplexer(s).
+Unit <decoder_shadow> synthesized.
+
+Synthesizing Unit <programcounter>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/programcounter.vhd".
+    Found 31-bit register for signal <pc_value_old>.
+    Found 31-bit adder for signal <adder_result> created at line 86.
+    Found 31-bit 3-to-1 multiplexer for signal <adder_input_b> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <programcounter> synthesized.
+
+Synthesizing Unit <core2wb>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/core2wb.vhd".
+    Found 32-bit register for signal <in_dmem_read_data>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | oneacc                                         |
+    | Power Up State     | oneacc                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit 4-to-1 multiplexer for signal <out_dmem_read_size[1]_GND_26_o_wide_mux_82_OUT> created at line 442.
+    Found 4-bit 4-to-1 multiplexer for signal <out_dmem_write_size[1]_GND_26_o_wide_mux_99_OUT> created at line 442.
+    Found 32-bit 4-to-1 multiplexer for signal <out_dmem_write_size[1]_GND_26_o_wide_mux_114_OUT> created at line 575.
+    Found 30-bit 3-to-1 multiplexer for signal <msto_adr> created at line 74.
+    Found 32-bit 3-to-1 multiplexer for signal <msto_dat> created at line 74.
+    Found 4-bit 3-to-1 multiplexer for signal <msto_sel> created at line 74.
+    Found 32-bit 4-to-1 multiplexer for signal <GND_26_o_GND_26_o_mux_107_OUT> created at line 577.
+    Found 1-bit 4-to-1 multiplexer for signal <in_dmem_ready> created at line 16.
+WARNING:Xst:737 - Found 1-bit latch for signal <msto_cti<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred  31 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <core2wb> synthesized.
+
+Synthesizing Unit <irq_controller>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/core/irq_controller.vhd".
+    Found 16-bit register for signal <pending>.
+    Found 4-bit comparator lessequal for signal <n0051> created at line 109
+    Found 4-bit comparator lessequal for signal <n0055> created at line 109
+    Found 4-bit comparator lessequal for signal <n0059> created at line 109
+    Found 4-bit comparator lessequal for signal <n0063> created at line 109
+    Found 4-bit comparator lessequal for signal <n0067> created at line 109
+    Found 4-bit comparator lessequal for signal <n0071> created at line 109
+    Found 4-bit comparator lessequal for signal <n0075> created at line 109
+    Found 4-bit comparator lessequal for signal <n0079> created at line 109
+    Found 4-bit comparator lessequal for signal <n0083> created at line 109
+    Found 4-bit comparator lessequal for signal <n0087> created at line 109
+    Found 4-bit comparator lessequal for signal <n0091> created at line 109
+    Found 4-bit comparator lessequal for signal <n0095> created at line 109
+    Found 4-bit comparator lessequal for signal <n0099> created at line 109
+    Found 4-bit comparator lessequal for signal <n0103> created at line 109
+    Found 4-bit comparator lessequal for signal <n0107> created at line 109
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred  15 Comparator(s).
+	inferred  53 Multiplexer(s).
+Unit <irq_controller> synthesized.
+
+Synthesizing Unit <wb_intercon>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd".
+        slv_mask_vector = "1111000000000001"
+        mst_mask_vector = "1000"
+WARNING:Xst:647 - Input <msto[3]_adr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_adr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_adr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[15]_wbcfg<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[15]_wbcfg<33:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[14]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[14]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[13]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[13]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[12]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[12]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[11]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[11]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[10]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[10]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[9]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[9]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[8]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[8]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[7]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[7]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[6]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[6]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[5]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[5]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[4]_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[4]_wbcfg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[3]_wbcfg<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[3]_wbcfg<33:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[2]_wbcfg<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[2]_wbcfg<33:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[1]_wbcfg<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[1]_wbcfg<33:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[0]_wbcfg<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[0]_wbcfg<33:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_stb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[3]_cyc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_stb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[2]_cyc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_we> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_stb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <msto[1]_cyc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[14]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[13]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[12]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[11]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[10]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[9]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[8]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[7]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[6]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[5]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <slvo[4]_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred  58 Multiplexer(s).
+Unit <wb_intercon> synthesized.
+
+Synthesizing Unit <memwrapper>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memwrapper.vhd".
+        memaddr = 0
+        addrmask = 4193280
+        filename = "../Assignment1/blinky.ram"
+        size = 256
+    Found 1-bit register for signal <out_imem_ready>.
+    Found 31-bit comparator lessequal for signal <n0001> created at line 136
+    Found 31-bit comparator lessequal for signal <n0004> created at line 137
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <memwrapper> synthesized.
+
+Synthesizing Unit <memdiv>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memdiv.vhd".
+        filename = "../Assignment1/blinky.ram"
+        size = 256
+WARNING:Xst:647 - Input <in_imem_read_addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <imem_read_fault>.
+    Found 32-bit register for signal <dmem_data>.
+    Found 1-bit register for signal <dmem_read_fault>.
+    Found 1-bit register for signal <dmem_write_fault>.
+    Found 32-bit register for signal <imem_data>.
+    Found 256x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 32-bit 4-to-1 multiplexer for signal <in_dmem_read_addr[1]_GND_36_o_wide_mux_9_OUT> created at line 196.
+    Found 32-bit 4-to-1 multiplexer for signal <in_dmem_write_addr[1]_BUS_0065_wide_mux_22_OUT> created at line 291.
+    Found 32-bit 4-to-1 multiplexer for signal <in_dmem_write_addr[1]_BUS_0065_wide_mux_23_OUT> created at line 305.
+    Found 32-bit 4-to-1 multiplexer for signal <in_dmem_write_size[1]_BUS_0065_wide_mux_27_OUT> created at line 289.
+    Found 1-bit 4-to-1 multiplexer for signal <in_dmem_write_size[1]_PWR_37_o_Mux_28_o> created at line 289.
+    Found 30-bit comparator lessequal for signal <in_imem_read_addr[31]_GND_36_o_LessThan_1_o> created at line 143
+    Found 30-bit comparator lessequal for signal <in_dmem_read_addr[31]_GND_36_o_LessThan_8_o> created at line 183
+    Found 30-bit comparator greater for signal <in_dmem_write_addr[31]_GND_36_o_LessThan_21_o> created at line 284
+    Summary:
+	inferred   2 RAM(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  13 Multiplexer(s).
+Unit <memdiv> synthesized.
+
+Synthesizing Unit <mem2wb>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/mem2wb.vhd".
+        memaddr = 0
+        addrmask = 4193280
+WARNING:Xst:647 - Input <wslvi_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <out_dmem_ready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <ack>.
+    Found 32-bit 4-to-1 multiplexer for signal <wslvo_dat> created at line 575.
+    Found 32-bit 4-to-1 multiplexer for signal <GND_37_o_GND_37_o_mux_27_OUT> created at line 577.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred  29 Multiplexer(s).
+Unit <mem2wb> synthesized.
+
+Synthesizing Unit <wb_dmem>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/dmem.vhd".
+        memaddr = 1024
+        addrmask = 4194048
+WARNING:Xst:647 - Input <wslvi_adr<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <burst_state>.
+    Found 1-bit register for signal <ack>.
+    Found finite state machine <FSM_2> for signal <burst_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | classic                                        |
+    | Power Up State     | classic                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 3-to-1 multiplexer for signal <burst_state[1]_X_37_o_Mux_11_o> created at line 89.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <wb_dmem> synthesized.
+
+Synthesizing Unit <blockram>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/mem/blockram.vhd".
+    Found 64x8-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 8-bit register for signal <do>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <blockram> synthesized.
+
+Synthesizing Unit <wb_led>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment1/soc/peripheral/led.vhd".
+        memaddr = 983040
+        addrmask = 4194303
+WARNING:Xst:647 - Input <wslvi_adr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <data>.
+    Found 1-bit register for signal <ack>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
+Unit <wb_led> synthesized.
+
+Synthesizing Unit <wb_switch>.
+    Related source file is "/home/ctnguyen/Works/ESY/Assignment2/switches.vhd".
+        memaddr = 983044
+        addrmask = 4194303
+WARNING:Xst:647 - Input <wslvi_adr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_dat> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_cti> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wslvi_bte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <data_buffer>.
+    Found 1-bit register for signal <ack>.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+Unit <wb_switch> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 14
+ 14x32-bit dual-port RAM                               : 2
+ 16x18-bit single-port Read Only RAM                   : 1
+ 16x4-bit single-port Read Only RAM                    : 1
+ 256x32-bit dual-port RAM                              : 2
+ 4x2-bit single-port Read Only RAM                     : 2
+ 64x8-bit single-port RAM                              : 4
+ 8x1-bit single-port Read Only RAM                     : 2
+# Adders/Subtractors                                   : 5
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 64
+ 1-bit register                                        : 29
+ 16-bit register                                       : 1
+ 2-bit register                                        : 9
+ 31-bit register                                       : 1
+ 32-bit register                                       : 12
+ 4-bit register                                        : 6
+ 8-bit register                                        : 6
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 31
+ 30-bit comparator greater                             : 1
+ 30-bit comparator lessequal                           : 2
+ 31-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 4
+ 4-bit comparator lessequal                            : 15
+# Multiplexers                                         : 383
+ 1-bit 2-to-1 multiplexer                              : 140
+ 1-bit 3-to-1 multiplexer                              : 13
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 16
+ 2-bit 2-to-1 multiplexer                              : 19
+ 2-bit 3-to-1 multiplexer                              : 6
+ 3-bit 2-to-1 multiplexer                              : 12
+ 30-bit 2-to-1 multiplexer                             : 8
+ 30-bit 3-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 2
+ 31-bit 3-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 92
+ 32-bit 3-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 3-to-1 multiplexer                              : 5
+ 4-bit 4-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 14
+ 8-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+# Xors                                                 : 7
+ 1-bit xor2                                            : 1
+ 30-bit xor2                                           : 5
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <immediate_signext_s3_7> in Unit <datapath_inst> is equivalent to the following 24 FFs/Latches, which will be removed : <immediate_signext_s3_8> <immediate_signext_s3_9> <immediate_signext_s3_10> <immediate_signext_s3_11> <immediate_signext_s3_12> <immediate_signext_s3_13> <immediate_signext_s3_14> <immediate_signext_s3_15> <immediate_signext_s3_16> <immediate_signext_s3_17> <immediate_signext_s3_18> <immediate_signext_s3_19> <immediate_signext_s3_20> <immediate_signext_s3_21> <immediate_signext_s3_22> <immediate_signext_s3_23> <immediate_signext_s3_24> <immediate_signext_s3_25> <immediate_signext_s3_26> <immediate_signext_s3_27> <immediate_signext_s3_28> <immediate_signext_s3_29> <immediate_signext_s3_30> <immediate_signext_s3_31> 
+INFO:Xst:2261 - The FF/Latch <multicycleinstruction_0> in Unit <decoder_fsm_inst> is equivalent to the following 5 FFs/Latches, which will be removed : <multicycleinstruction_5> <multicycleinstruction_6> <multicycleinstruction_7> <multicycleinstruction_8> <multicycleinstruction_9> 
+WARNING:Xst:1710 - FF/Latch <data_buffer_15> (without init value) has a constant value of 0 in block <swdev>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pc_value_s2_0> (without init value) has a constant value of 0 in block <datapath_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <multicycleinstruction_0> (without init value) has a constant value of 0 in block <decoder_fsm_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <msto_cti_2> has a constant value of 0 in block <core2wb_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_buffer_16> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_17> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_18> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_19> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_20> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_21> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_22> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_23> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_24> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_25> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_26> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_27> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_28> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_29> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_30> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <data_buffer_31> of sequential type is unconnected in block <swdev>.
+WARNING:Xst:2677 - Node <multicycleinstruction_10> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_11> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_12> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_13> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_14> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_15> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_20> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_21> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_22> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_23> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_24> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_25> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_26> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_27> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_28> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_29> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_30> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2677 - Node <multicycleinstruction_31> of sequential type is unconnected in block <decoder_fsm_inst>.
+WARNING:Xst:2404 -  FFs/Latches <data_buffer<31:15>> (without init value) have a constant value of 0 in block <wb_switch>.
+WARNING:Xst:2404 -  FFs/Latches <multicycleinstruction<31:20>> (without init value) have a constant value of 0 in block <decoder_fsm>.
+
+Synthesizing (advanced) Unit <blockram>.
+INFO:Xst:3231 - The small RAM <Mram_RAM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we_0>          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <di>            |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <blockram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <core>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out_dmem_read_size> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cp_dmem_signal_read_size> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out_dmem_read_size> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out_dmem_write_size> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cp_dmem_signal_write_size> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out_dmem_write_size> |          |
+    -----------------------------------------------------------------------
+Unit <core> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decoder_16bit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_output_s3_tflag_write_enable> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input_instruction<15:13>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <output_s3_tflag_write_enable> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0145> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input_instruction<15:12>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <decoder_16bit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decoder_fsm>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out_irq_ack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <output.state_variable<2:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out_irq_ack>   |          |
+    -----------------------------------------------------------------------
+Unit <decoder_fsm> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decoder_shadow>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0054> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 18-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <input_instruction> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <decoder_shadow> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memdiv>.
+INFO:Xst:3213 - HDL ADVISOR - Characteristics of the register <imem_data> prevent it from being combined with the RAM <Mram_memory> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <in_dmem_write_addr[31]_GND_36_o_LessThan_21_o_0_0> | high     |
+    |     addrA          | connected to signal <in_dmem_write_addr<9:2>> |          |
+    |     diA            | connected to signal <in_dmem_write_size[1]_BUS_0065_wide_mux_27_OUT> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     addrB          | connected to signal <in_imem_read_addr<9:2>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memory> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memory1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <in_dmem_write_addr[31]_GND_36_o_LessThan_21_o_0_1> | high     |
+    |     addrA          | connected to signal <in_dmem_write_addr<9:2>> |          |
+    |     diA            | connected to signal <in_dmem_write_size[1]_BUS_0065_wide_mux_27_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     addrB          | connected to signal <in_dmem_read_addr<9:2>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <memdiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <registerfile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_reg_array> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 14-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <n0039_0_0>     | high     |
+    |     addrA          | connected to signal <write_num>     |          |
+    |     diA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 14-word x 32-bit                    |          |
+    |     addrB          | connected to signal <a_num>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_reg_array1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 14-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <n0039_0_1>     | high     |
+    |     addrA          | connected to signal <write_num>     |          |
+    |     diA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 14-word x 32-bit                    |          |
+    |     addrB          | connected to signal <b_num>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <registerfile> synthesized (advanced).
+WARNING:Xst:2677 - Node <multicycleinstruction_10> of sequential type is unconnected in block <decoder_fsm>.
+WARNING:Xst:2677 - Node <multicycleinstruction_11> of sequential type is unconnected in block <decoder_fsm>.
+WARNING:Xst:2677 - Node <multicycleinstruction_12> of sequential type is unconnected in block <decoder_fsm>.
+WARNING:Xst:2677 - Node <multicycleinstruction_13> of sequential type is unconnected in block <decoder_fsm>.
+WARNING:Xst:2677 - Node <multicycleinstruction_14> of sequential type is unconnected in block <decoder_fsm>.
+WARNING:Xst:2677 - Node <multicycleinstruction_15> of sequential type is unconnected in block <decoder_fsm>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 14
+ 14x32-bit dual-port distributed RAM                   : 2
+ 16x18-bit single-port distributed Read Only RAM       : 1
+ 16x4-bit single-port distributed Read Only RAM        : 1
+ 256x32-bit dual-port distributed RAM                  : 2
+ 4x2-bit single-port distributed Read Only RAM         : 2
+ 64x8-bit single-port distributed RAM                  : 4
+ 8x1-bit single-port distributed Read Only RAM         : 2
+# Adders/Subtractors                                   : 5
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 515
+ Flip-Flops                                            : 515
+# Comparators                                          : 31
+ 30-bit comparator greater                             : 1
+ 30-bit comparator lessequal                           : 2
+ 31-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 4
+ 4-bit comparator lessequal                            : 15
+# Multiplexers                                         : 410
+ 1-bit 2-to-1 multiplexer                              : 169
+ 1-bit 3-to-1 multiplexer                              : 13
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 16
+ 2-bit 2-to-1 multiplexer                              : 18
+ 2-bit 3-to-1 multiplexer                              : 6
+ 3-bit 2-to-1 multiplexer                              : 12
+ 30-bit 2-to-1 multiplexer                             : 8
+ 30-bit 3-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 31-bit 3-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 92
+ 32-bit 3-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 38
+ 4-bit 3-to-1 multiplexer                              : 5
+ 4-bit 4-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 14
+ 8-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+# Xors                                                 : 7
+ 1-bit xor2                                            : 1
+ 30-bit xor2                                           : 5
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <multicycleinstruction_0> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <multicycleinstruction_5> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <multicycleinstruction_6> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <multicycleinstruction_7> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <multicycleinstruction_8> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <multicycleinstruction_9> (without init value) has a constant value of 0 in block <decoder_fsm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <msto_cti_2> has a constant value of 0 in block <core2wb>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <immediate_signext_s3_7> in Unit <datapath> is equivalent to the following 24 FFs/Latches, which will be removed : <immediate_signext_s3_8> <immediate_signext_s3_9> <immediate_signext_s3_10> <immediate_signext_s3_11> <immediate_signext_s3_12> <immediate_signext_s3_13> <immediate_signext_s3_14> <immediate_signext_s3_15> <immediate_signext_s3_16> <immediate_signext_s3_17> <immediate_signext_s3_18> <immediate_signext_s3_19> <immediate_signext_s3_20> <immediate_signext_s3_21> <immediate_signext_s3_22> <immediate_signext_s3_23> <immediate_signext_s3_24> <immediate_signext_s3_25> <immediate_signext_s3_26> <immediate_signext_s3_27> <immediate_signext_s3_28> <immediate_signext_s3_29> <immediate_signext_s3_30> <immediate_signext_s3_31> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ normal      | 0000
+ reset       | 0001
+ reset2      | 0010
+ copypctolr  | 0011
+ branchdelay | unreached
+ irq_pushsr  | 0101
+ irq_pushlr  | 0110
+ irq_setsr   | 0111
+ irq_setpc   | 1000
+ reti_poplr  | 1001
+ reti_incsp1 | 1010
+ reti_popsr  | 1011
+ reti_incsp2 | 1100
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <corewrap_inst/core2wb_inst/FSM_1> on signal <state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ oneacc   | 00
+ simaccwr | 01
+ simaccrd | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <dmem/FSM_2> on signal <burst_state[1:2]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ classic    | 00
+ burst      | 01
+ endofburst | 10
+------------------------
+
+Optimizing unit <lt16soc_top> ...
+
+Optimizing unit <wb_switch> ...
+
+Optimizing unit <core> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <registerfile> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <decoder> ...
+
+Optimizing unit <decoder_pre> ...
+
+Optimizing unit <decoder_fsm> ...
+
+Optimizing unit <controlpath> ...
+
+Optimizing unit <programcounter> ...
+
+Optimizing unit <core2wb> ...
+
+Optimizing unit <irq_controller> ...
+
+Optimizing unit <wb_intercon> ...
+
+Optimizing unit <memwrapper> ...
+
+Optimizing unit <memdiv> ...
+
+Optimizing unit <mem2wb> ...
+
+Optimizing unit <wb_dmem> ...
+
+Optimizing unit <blockram> ...
+
+Optimizing unit <wb_led> ...
+WARNING:Xst:1710 - FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_0> (without init value) has a constant value of 0 in block <lt16soc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dmem/burst_state_FSM_FFd2> has a constant value of 0 in block <lt16soc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dmem/burst_state_FSM_FFd1> has a constant value of 0 in block <lt16soc_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_10> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_9> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_11> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_10> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_12> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_11> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_13> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_12> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_14> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_13> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_20> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_19> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_15> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_14> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_21> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_20> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_16> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_15> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_22> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_21> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_17> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_16> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_23> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_22> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_18> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_17> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_24> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_23> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_19> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_18> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_register_write_size_0> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/controlpath_inst/in_dec_2_s2_dmem_read_size_0> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_25> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_24> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_30> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_29> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_31> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_30> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_26> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_25> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_27> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_26> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_28> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_27> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_29> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_28> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/imem_dec_signal_instruction_halfword_select> in Unit <lt16soc_top> is equivalent to the following 2 FFs/Latches, which will be removed : <corewrap_inst/core_inst/datapath_inst/pc_value_s2_1> <corewrap_inst/core_inst/programcounter_inst/pc_value_old_0> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_16> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_1> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_17> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_2> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_18> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_3> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_19> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_4> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_2> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_1> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_3> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_2> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_4> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_3> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_5> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_4> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_6> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_5> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_7> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_6> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_8> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_7> 
+INFO:Xst:2261 - The FF/Latch <corewrap_inst/core_inst/datapath_inst/pc_value_s2_9> in Unit <lt16soc_top> is equivalent to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/programcounter_inst/pc_value_old_8> 
+INFO:Xst:3203 - The FF/Latch <corewrap_inst/core_inst/controlpath_inst/in_dec_3_s3_tflag_write_data_select> in Unit <lt16soc_top> is the opposite to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/controlpath_inst/in_dec_3_s3_dmem_write_data_select> 
+INFO:Xst:3203 - The FF/Latch <corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_tflag_write_data_select> in Unit <lt16soc_top> is the opposite to the following FF/Latch, which will be removed : <corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_dmem_write_data_select> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lt16soc_top, actual ratio is 3.
+FlipFlop corewrap_inst/core_inst/controlpath_inst/in_dec_2_s2_immediate_0 has been replicated 1 time(s)
+FlipFlop corewrap_inst/core_inst/controlpath_inst/in_dec_2_s2_immediate_1 has been replicated 1 time(s)
+FlipFlop corewrap_inst/core_inst/controlpath_inst/in_dec_2_s2_immediate_7 has been replicated 1 time(s)
+FlipFlop corewrap_inst/core_inst/imem_dec_signal_instruction_halfword_select has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 455
+ Flip-Flops                                            : 455
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : lt16soc_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2397
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 67
+#      LUT3                        : 117
+#      LUT4                        : 237
+#      LUT5                        : 464
+#      LUT6                        : 1148
+#      MUXCY                       : 195
+#      MUXF7                       : 40
+#      VCC                         : 1
+#      XORCY                       : 126
+# FlipFlops/Latches                : 455
+#      FDC                         : 3
+#      FDCE                        : 32
+#      FDE                         : 59
+#      FDR                         : 58
+#      FDRE                        : 287
+#      FDS                         : 1
+#      FDSE                        : 15
+# RAMS                             : 158
+#      RAM128X1D                   : 64
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+#      RAM64M                      : 40
+#      RAM64X1D                    : 8
+#      RAM64X1S                    : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 16
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             455  out of  126800     0%  
+ Number of Slice LUTs:                 2546  out of  63400     4%  
+    Number used as Logic:              2034  out of  63400     3%  
+    Number used as Memory:              512  out of  19000     2%  
+       Number used as RAM:              512
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2632
+   Number with an unused Flip Flop:    2177  out of   2632    82%  
+   Number with an unused LUT:            86  out of   2632     3%  
+   Number of fully used LUT-FF pairs:   369  out of   2632    14%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    210    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 613   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.996ns (Maximum Frequency: 142.929MHz)
+   Minimum input arrival time before clock: 3.539ns
+   Maximum output required time after clock: 0.645ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.996ns (frequency: 142.929MHz)
+  Total number of paths / destination ports: 50606987 / 2330
+-------------------------------------------------------------------------
+Delay:               6.996ns (Levels of Logic = 16)
+  Source:            corewrap_inst/core_inst/datapath_inst/register_number_b_s2_1 (FF)
+  Destination:       memwrap_inst/mem_inst/imem_read_fault (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: corewrap_inst/core_inst/datapath_inst/register_number_b_s2_1 to memwrap_inst/mem_inst/imem_read_fault
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.361   0.556  corewrap_inst/core_inst/datapath_inst/register_number_b_s2_1 (corewrap_inst/core_inst/datapath_inst/register_number_b_s2_1)
+     LUT4:I0->O            3   0.097   0.305  corewrap_inst/core_inst/datapath_inst/in_cp_s3_register_write_enable_in_cp_s3_register_write_number[3]_AND_50_o_SW0 (N4)
+     LUT6:I5->O           90   0.097   0.411  corewrap_inst/core_inst/datapath_inst/in_cp_s3_register_write_enable_in_cp_s3_register_write_number[3]_AND_50_o (corewrap_inst/core_inst/datapath_inst/in_cp_s3_register_write_enable_in_cp_s3_register_write_number[3]_AND_50_o)
+     LUT6:I5->O            1   0.097   0.295  wbicn_inst/Mmux_tmpmsto[0]_adr262 (wbicn_inst/Mmux_tmpmsto[0]_adr261)
+     LUT6:I5->O            8   0.097   0.725  wbicn_inst/Mmux_tmpmsto[0]_adr263 (wbicn_inst/tmpmsto[0]_adr<5>)
+     LUT6:I0->O            3   0.097   0.521  wbicn_inst/GND_33_o_mgnt_idx[1]_AND_151_o<29>3 (wbicn_inst/GND_33_o_mgnt_idx[1]_AND_151_o<29>2)
+     LUT6:I3->O            1   0.097   0.279  wbicn_inst/GND_33_o_mgnt_idx[1]_AND_151_o<29>5_1 (wbicn_inst/GND_33_o_mgnt_idx[1]_AND_151_o<29>5)
+     MUXF7:S->O           23   0.335   0.393  wbicn_inst/Mmux_msti[0]_ack2_SW1 (N157)
+     LUT6:I5->O            1   0.097   0.295  corewrap_inst/core_inst/programcounter_inst/in_dec_stall_stall_OR_117_o_SW0 (N223)
+     LUT6:I5->O            3   0.097   0.693  corewrap_inst/core_inst/programcounter_inst/mux1101 (core2mem_read_addr<11>)
+     LUT5:I0->O            1   0.097   0.000  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_lut<0> (memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<0> (memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<1> (memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<2> (memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<3> (memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<3>)
+     MUXCY:CI->O          33   0.023   0.402  memwrap_inst/mem_inst/Mcompar_in_imem_read_addr[31]_INV_115_o_cy<4> (memwrap_inst/mem_inst/in_imem_read_addr[31]_INV_115_o)
+     LUT4:I3->O            1   0.097   0.000  memwrap_inst/mem_inst/imem_data_30_glue_set (memwrap_inst/mem_inst/imem_data_30_glue_set)
+     FDRE:D                    0.008          memwrap_inst/mem_inst/imem_data_30
+    ----------------------------------------
+    Total                      6.996ns (2.119ns logic, 4.877ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 663 / 577
+-------------------------------------------------------------------------
+Offset:              3.539ns (Levels of Logic = 7)
+  Source:            rst (PAD)
+  Destination:       corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.001   0.800  rst_IBUF (rst_IBUF)
+     LUT6:I0->O           19   0.097   0.777  irqcontr_inst/req (irq2core_req)
+     LUT6:I0->O            2   0.097   0.383  irqcontr_inst/Mmux_num112 (irq2core_priority<0>)
+     LUT6:I4->O            2   0.097   0.299  corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/in_dp_runtime_priority[3]_in_irq_priority[3]_LessThan_22_o1 (corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/in_dp_runtime_priority[3]_in_irq_priority[3]_LessThan_22_o1)
+     LUT6:I5->O            4   0.097   0.309  corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd3-In1 (corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd3-In1)
+     LUT5:I4->O            1   0.097   0.379  corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1-In_SW0 (N108)
+     LUT6:I4->O            1   0.097   0.000  corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1-In (corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1-In)
+     FDR:D                     0.008          corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/state_FSM_FFd1
+    ----------------------------------------
+    Total                      3.539ns (0.591ns logic, 2.948ns route)
+                                       (16.7% logic, 83.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 1)
+  Source:            leddev/data_7 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: leddev/data_7 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.361   0.283  leddev/data_7 (leddev/data_7)
+     OBUF:I->O                 0.000          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.996|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 41.00 secs
+Total CPU time to Xst completion: 31.17 secs
+ 
+--> 
+
+
+Total memory usage is 217100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  212 (   0 filtered)
+Number of infos    :  156 (   0 filtered)
+

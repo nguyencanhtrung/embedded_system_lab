@@ -1,0 +1,135 @@
+ISim log file
+Running: /home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 15001 ps: Error: Slave did not ACK the read properly
+at 45001 ps: Error: Slave did not ACK the read properly
+at 75001 ps: Error: Slave did not ACK the read properly
+at 105001 ps: Error: Slave did not ACK the read properly
+at 135001 ps: Error: Slave did not ACK the read properly
+at 165001 ps: Error: Slave did not ACK the read properly
+at 195001 ps: Error: Slave did not ACK the read properly
+at 225001 ps: Error: Slave did not ACK the read properly
+at 255001 ps: Error: Slave did not ACK the read properly
+at 285001 ps: Error: Slave did not ACK the read properly
+at 315001 ps: Error: Slave did not ACK the read properly
+at 345001 ps: Error: Slave did not ACK the read properly
+at 375001 ps: Error: Slave did not ACK the read properly
+at 405001 ps: Error: Slave did not ACK the read properly
+at 435001 ps: Error: Slave did not ACK the read properly
+at 465001 ps: Error: Slave did not ACK the read properly
+at 495001 ps: Error: Slave did not ACK the read properly
+at 525001 ps: Error: Slave did not ACK the read properly
+at 555001 ps: Error: Slave did not ACK the read properly
+at 585001 ps: Error: Slave did not ACK the read properly
+at 615001 ps: Error: Slave did not ACK the read properly
+at 645001 ps: Error: Slave did not ACK the read properly
+at 675001 ps: Error: Slave did not ACK the read properly
+at 705001 ps: Error: Slave did not ACK the read properly
+at 735001 ps: Error: Slave did not ACK the read properly
+at 765001 ps: Error: Slave did not ACK the read properly
+at 795001 ps: Error: Slave did not ACK the read properly
+at 825001 ps: Error: Slave did not ACK the read properly
+at 855001 ps: Error: Slave did not ACK the read properly
+at 885001 ps: Error: Slave did not ACK the read properly
+at 915001 ps: Error: Slave did not ACK the read properly
+at 945001 ps: Error: Slave did not ACK the read properly
+at 975001 ps: Error: Slave did not ACK the read properly
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 15001 ps: Error: Slave did not ACK the read properly
+at 45001 ps: Error: Slave did not ACK the read properly
+at 75001 ps: Error: Slave did not ACK the read properly
+at 105001 ps: Error: Slave did not ACK the read properly
+at 135001 ps: Error: Slave did not ACK the read properly
+at 165001 ps: Error: Slave did not ACK the read properly
+at 195001 ps: Error: Slave did not ACK the read properly
+at 225001 ps: Error: Slave did not ACK the read properly
+at 255001 ps: Error: Slave did not ACK the read properly
+at 285001 ps: Error: Slave did not ACK the read properly
+at 315001 ps: Error: Slave did not ACK the read properly
+at 345001 ps: Error: Slave did not ACK the read properly
+at 375001 ps: Error: Slave did not ACK the read properly
+at 405001 ps: Error: Slave did not ACK the read properly
+at 435001 ps: Error: Slave did not ACK the read properly
+at 465001 ps: Error: Slave did not ACK the read properly
+at 495001 ps: Error: Slave did not ACK the read properly
+at 525001 ps: Error: Slave did not ACK the read properly
+at 555001 ps: Error: Slave did not ACK the read properly
+at 585001 ps: Error: Slave did not ACK the read properly
+at 615001 ps: Error: Slave did not ACK the read properly
+at 645001 ps: Error: Slave did not ACK the read properly
+at 675001 ps: Error: Slave did not ACK the read properly
+at 705001 ps: Error: Slave did not ACK the read properly
+at 735001 ps: Error: Slave did not ACK the read properly
+at 765001 ps: Error: Slave did not ACK the read properly
+at 795001 ps: Error: Slave did not ACK the read properly
+at 825001 ps: Error: Slave did not ACK the read properly
+at 855001 ps: Error: Slave did not ACK the read properly
+at 885001 ps: Error: Slave did not ACK the read properly
+at 915001 ps: Error: Slave did not ACK the read properly
+at 945001 ps: Error: Slave did not ACK the read properly
+at 975001 ps: Error: Slave did not ACK the read properly
+
+** Failure:Simulation terminated!
+User(VHDL) Code Called Simulation Stop
+In process tb_switches.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 15001 ps: Error: Slave did not ACK the read properly
+at 45001 ps: Error: Slave did not ACK the read properly
+at 75001 ps: Error: Slave did not ACK the read properly
+at 105001 ps: Error: Slave did not ACK the read properly
+at 135001 ps: Error: Slave did not ACK the read properly
+at 165001 ps: Error: Slave did not ACK the read properly
+at 195001 ps: Error: Slave did not ACK the read properly
+at 225001 ps: Error: Slave did not ACK the read properly
+at 255001 ps: Error: Slave did not ACK the read properly
+at 285001 ps: Error: Slave did not ACK the read properly
+at 315001 ps: Error: Slave did not ACK the read properly
+at 345001 ps: Error: Slave did not ACK the read properly
+at 375001 ps: Error: Slave did not ACK the read properly
+at 405001 ps: Error: Slave did not ACK the read properly
+at 435001 ps: Error: Slave did not ACK the read properly
+at 465001 ps: Error: Slave did not ACK the read properly
+at 495001 ps: Error: Slave did not ACK the read properly
+at 525001 ps: Error: Slave did not ACK the read properly
+at 555001 ps: Error: Slave did not ACK the read properly
+at 585001 ps: Error: Slave did not ACK the read properly
+at 615001 ps: Error: Slave did not ACK the read properly
+at 645001 ps: Error: Slave did not ACK the read properly
+at 675001 ps: Error: Slave did not ACK the read properly
+at 705001 ps: Error: Slave did not ACK the read properly
+at 735001 ps: Error: Slave did not ACK the read properly
+at 765001 ps: Error: Slave did not ACK the read properly
+at 795001 ps: Error: Slave did not ACK the read properly
+at 825001 ps: Error: Slave did not ACK the read properly
+at 855001 ps: Error: Slave did not ACK the read properly
+at 885001 ps: Error: Slave did not ACK the read properly
+at 915001 ps: Error: Slave did not ACK the read properly
+at 945001 ps: Error: Slave did not ACK the read properly
+at 975001 ps: Error: Slave did not ACK the read properly
+
+** Failure:Simulation terminated!
+User(VHDL) Code Called Simulation Stop
+In process tb_switches.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+# exit 0

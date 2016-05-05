@@ -1,14 +1,22 @@
 By Trung Nguyen - 26-11-2015
-Important denotes for Embedded Systems Lab
+Important notes for Embedded Systems Lab
 The correctness is verified by running test_endianess program
 This conclusion may be just valid for Embedded System Lab in WS15/16
 --------------------------------------------------
 Big Endian means: 
 	Least Significant Byte (granuality = 8) (LSB)/ LSHalfWord (gran = 16) will be store in the highest address
-	From programmer point of view:   MSB | MSB -1 | ... | LSB +1| LSB
-	=> From HW point of view:        LSB | LSB +1 | ... | MSB -1| MSB     
+	If: access size = 1 byte	
+		From Register point of view:     MSB | MSB -1 | ... | LSB +1| LSB
+		From Memory point of view  :     LSB | LSB +1 | ... | MSB -1| MSB     
+	If: access size = 2 byte	
+		From Register point of view:     MSHalfword | MSHalfword -1| ... | LSHalfword +1 | LSHalfword
+		From Memory point of view  :     LSHalfword | LSHalfword +1| ... | MSHalfword -1 | MSHalfword 
+	
+	So: Before sending data from register to the memory: Data must be re-arranged as memory point of view, 
+		using encode_function in wishbone;
+	    After receiving data from memory (wishbone bus), data must be re-arranged as Register point of view 
+		before storing in register, using decode_function in wishbone file
 
--- Remember: it is applied for this lab only since it tightly depends on how load and store instructions work.
 -- LOAD and STORE in this architecture
 	cơ chế của lệnh store là sẽ store từ địa chỉ thấp -> cao (make sense)
 //	DATA [ 31-24 | 23-16 | 15-8 | 7-0 ]    --- HW point of view

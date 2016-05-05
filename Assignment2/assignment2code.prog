@@ -1,0 +1,92 @@
+// By: Trung C. Nguyen
+// Assignment 2
+//*********************
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+
+.align
+led_addr:	  .word 0x000F0000
+sw_addr:          .word 0x000F0004
+//w_cnt_top:	.word 0x1FC000
+w_cnt_top:	.word 0x1		//for simulation only
+
+main:
+ldr r0,>led_addr	//LED addr
+addi r6,8		//outer counter top
+clr r7			//wait counter
+ldr r8,>w_cnt_top   	//base preescaler value-- load pc relative, load gia tri counter vao register r8
+
+clr r3
+clr r2
+out_loop:
+ldr r2,>sw_addr    	// load pc relative hay noi cach khac load gia tri address 2 vao r2
+ld16 r3,r2       	// load data from pointer r2 to r3 ; R3 = Btn & Sw
+clr r1
+st08 r0,r1       	// store data o r1 vao pointer r0 ; r0 la address cua led
+call >wait
+nop
+
+fill:
+	lsh r1,r1,1	// logic shift left, r1 la gia tri cua led duoc shift left tuc la led se nhay sang sang ben trai
+	addi r1,1
+	st08 r0,r1
+	call >wait
+	nop
+
+	addi r5,1
+	cmp neq r5,r6  // so sanh counter r5 voi upperbound
+	br true >fill
+	nop
+	clr r5         // r5 =0
+
+flush:
+	lsh r1,r1,1
+	st08 r0,r1
+	call >wait
+	nop
+
+	addi r5,1
+	cmp neq r5,r6
+	br true >flush
+	nop
+	clr r5
+	br always >out_loop
+	nop
+
+//subroutine to iterate until counter overflow
+wait:
+        
+    clr r4
+	//addi r4,1
+     
+	inc_j:        
+		clr r7				//inititalize inner counter
+	inc_i:
+		cmp neq r7,r8		// r8 = cnt_top
+		br true >inc_i		//if i=cnt_top
+	addi r7,1
+    cmp neq r4, r3    // r3 is content of SW // not fit with specification
+    br true >inc_j
+    addi r4, 1
+	ret					//else
+	nop
+
+// wait function: r3 x r8
+
+
+
+
+
+
+
+
+
+
+

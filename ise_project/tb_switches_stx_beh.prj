@@ -1,0 +1,8 @@
+vhdl isim_temp "../Assignment1/soc/core/lt16x32_global.vhd"
+vhdl isim_temp "../Assignment1/soc/lib/wishbone.vhd"
+vhdl isim_temp "../Assignment1/soc/lib/txt_util.vhd"
+vhdl isim_temp "../Assignment1/soc/lib/config.vhd"
+vhdl isim_temp "../Assignment1/soc/core/lt16x32_internal.vhd"
+vhdl isim_temp "../Assignment2/switches.vhd"
+vhdl isim_temp "../Assignment1/soc/lib/wb_tp.vhd"
+vhdl isim_temp "../Assignment2/tb_switches.vhd"

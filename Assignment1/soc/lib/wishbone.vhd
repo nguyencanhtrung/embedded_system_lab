@@ -574,7 +574,7 @@ package body wishbone is
 		--if WB_ENDIANESS = little then
 			case wrsz is
 			when "00" =>
-				if 		wradr = "11" then	dword( 7 downto  0) := din(7 downto 0);
+				if 	wradr = "11" then	dword( 7 downto  0) := din(7 downto 0);
 				elsif	wradr = "10" then	dword(15 downto  8) := din(7 downto 0);
 				elsif	wradr = "01" then	dword(23 downto 16) := din(7 downto 0);
 				elsif	wradr = "00" then	dword(31 downto 24) := din(7 downto 0);
@@ -597,7 +597,7 @@ package body wishbone is
 				elsif	wradr = "01" then	dword(15 downto  8) := din(7 downto 0);
 				elsif	wradr = "10" then	dword(23 downto 16) := din(7 downto 0);
 				elsif	wradr = "11" then	dword(31 downto 24) := din(7 downto 0);
-				else						dword				:= (others=>'0');
+				else								dword				:= (others=>'0');
 				end if;
 			when "01" =>
 				if		wradr = "00" or wradr = "01" then	dword(15 downto 0) := din(15 downto 0);
@@ -630,34 +630,34 @@ package body wishbone is
 		when 8 =>
 			case sel is
 			when "0001" =>
-				dword(7 downto 0) := din( 7 downto  0);
+				dword(7 downto 0) 	:= din( 7 downto  0);
 			when "0010" =>
-				dword(7 downto 0) := din(15 downto  8);
+				dword(7 downto 0) 	:= din(15 downto  8);
 			when "0100" =>
-				dword(7 downto 0) := din(23 downto 16);
+				dword(7 downto 0) 	:= din(23 downto 16);
 			when "1000" =>
-				dword(7 downto 0) := din(31 downto 24);
+				dword(7 downto 0) 	:= din(31 downto 24);
 			when "1100" =>
-				dword(15 downto 0) := din(31 downto 16);
+				dword(15 downto 0) 	:= din(31 downto 16);
 			when "0011" =>
-				dword(15 downto 0) := din(15 downto 0);
+				dword(15 downto 0) 	:= din(15 downto 0);
 			when "1111" =>
-				dword := din;
+				dword 					:= din;
 			when others =>
-				dword := (others => '0');
+				dword 					:= (others => '0');
 			end case;
 
 		when 16 =>
 			--untested! do not use without (extensive) testing
 			if		sel = "0011" then	dword(15 downto 0):= din(15 downto 0) ;
 			elsif	sel = "1100" then	dword(15 downto 0):= din(31 downto 16);
-			else						dword				:= (others=>'0');
+			else						dword						:= (others=>'0');
 			end if;
 		when 32 =>
 			--untested! do not use without (extensive) testing
-			dword := din;
+			dword 	:= din;
 		when others =>
-			dword	:= (others=>'0');
+			dword		:= (others=>'0');
 		end case;
 
 		return(dword);

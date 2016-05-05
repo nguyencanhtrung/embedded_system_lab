@@ -42,13 +42,13 @@ NET sw(6) 				LOC = "G16"; # Bank = 3, Pin name = IO_L2N_GC_VRP_3,  Sch name = S
 NET sw(7) 				LOC = "G15"; # Bank = 3, Pin name = IO_L2P_GC_VRN_3,  Sch name = SW7
 
 # on Board BUTTONS
-#NET "btn<0>"			LOC = "G6";  # BTN0
-#NET "btn<1>"			LOC = "G7";  # BTN1
-#NET "btn<2>"			LOC = "J21"; # BTN3 (joystick button)
-#NET "btn<3>"			LOC = "E6";  # Joystick "up"
-#NET "btn<4>"			LOC = "K19"; # Joystick "left"
-#NET "btn<5>"			LOC = "J17"; # Joystick "right"
-#NET "btn<6>"			LOC = "H15"; # Joystick "down"
+NET "btn<0>"			LOC = "G6";  # BTN0
+NET "btn<1>"			LOC = "G7";  # BTN1
+NET "btn<2>"			LOC = "J21"; # BTN3 (joystick button)
+NET "btn<3>"			LOC = "E6";  # Joystick "up"
+NET "btn<4>"			LOC = "K19"; # Joystick "left"
+NET "btn<5>"			LOC = "J17"; # Joystick "right"
+NET "btn<6>"			LOC = "H15"; # Joystick "down"
 
 # Audio
 #NET "ac97_bitclk" TNM="bitclk" | IOSTANDARD=LVCMOS33 | LOC = "AH17";   # Bank = 4,   Pin name = IO_L7P_GC_VRN_4,   Sch name = AUD-BIT-CLK

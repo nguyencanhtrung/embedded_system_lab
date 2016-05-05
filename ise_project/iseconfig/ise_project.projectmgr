@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="ise_project" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/corewrapper - RTL |home|ctnguyen|Works|ESY|Assignment1|soc|core|corewrapper.vhd</ClosedNode>
+         <ClosedNode>/dmem_test - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|dmem_test.vhd</ClosedNode>
+         <ClosedNode>/memwrapper - RTL |home|ctnguyen|Works|ESY|Assignment1|soc|mem|memwrapper.vhd</ClosedNode>
+         <ClosedNode>/processor - RTL |home|ctnguyen|Works|ESY|Assignment1|soc|core|processor.vhd</ClosedNode>
+         <ClosedNode>/slvtest - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|slvtest.vhd</ClosedNode>
+         <ClosedNode>/warmup1_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|warmup1.vhd/dut - lt16soc_top - RTL/corewrap_inst - corewrapper - RTL</ClosedNode>
+         <ClosedNode>/warmup1_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|warmup1.vhd/dut - lt16soc_top - RTL/dmem - wb_dmem - Behavioral</ClosedNode>
+         <ClosedNode>/warmup1_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|warmup1.vhd/dut - lt16soc_top - RTL/lt16soc_utils</ClosedNode>
+         <ClosedNode>/warmup1_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|warmup1.vhd/dut - lt16soc_top - RTL/memwrap_inst - memwrapper - RTL</ClosedNode>
+         <ClosedNode>/wb_dmem - Behavioral |home|ctnguyen|Works|ESY|Assignment1|soc|mem|dmem.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>dut - lt16soc_top - RTL (/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d50000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>dut - lt16soc_top - RTL (/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>wishbone.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >40</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001d6000000040101000100000000000000000000000064ffffffff000000810000000000000004000000b80000000100000000000000290000000100000000000000840000000100000000000000710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>wishbone.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000010001000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Synthesize - XST</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000120000000010000000100000000000000000000000064ffffffff000000810000000000000001000001200000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Synthesize - XST</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/core2wb_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|core2wb_tb.vhd</ClosedNode>
+         <ClosedNode>/core_tb - RTL |home|ctnguyen|Works|ESY|Assignment1|soc|core|core_tb.vhd</ClosedNode>
+         <ClosedNode>/coreicnmem_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|coreicnmem_tb.vhd</ClosedNode>
+         <ClosedNode>/corewbmem_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|corewbmem_tb.vhd</ClosedNode>
+         <ClosedNode>/corewrap_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|corewrap_tb.vhd</ClosedNode>
+         <ClosedNode>/cwicnmw_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|cwicnmw_tb.vhd</ClosedNode>
+         <ClosedNode>/cwmw_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|cwmw_tb.vhd</ClosedNode>
+         <ClosedNode>/dmem_sw_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|dmem_sw_tb.vhd/dut - lt16soc_top - RTL/corewrap_inst - corewrapper - RTL</ClosedNode>
+         <ClosedNode>/dmem_sw_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|dmem_sw_tb.vhd/dut - lt16soc_top - RTL/dmem - wb_dmem - Behavioral</ClosedNode>
+         <ClosedNode>/dmem_sw_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|dmem_sw_tb.vhd/dut - lt16soc_top - RTL/memwrap_inst - memwrapper - RTL</ClosedNode>
+         <ClosedNode>/dmem_test - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|dmem_test.vhd</ClosedNode>
+         <ClosedNode>/lt16soc_utils |home|ctnguyen|Works|ESY|Assignment1|soc|util|utils.vhd</ClosedNode>
+         <ClosedNode>/mem2wb_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|mem2wb_tb.vhd</ClosedNode>
+         <ClosedNode>/memdiv_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|memdiv_tb.vhd</ClosedNode>
+         <ClosedNode>/memwrap_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|memwrap_tb.vhd</ClosedNode>
+         <ClosedNode>/platform_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|platform_tb.vhd</ClosedNode>
+         <ClosedNode>/processor - RTL |home|ctnguyen|Works|ESY|Assignment1|soc|core|processor.vhd</ClosedNode>
+         <ClosedNode>/slvtest - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|slvtest.vhd</ClosedNode>
+         <ClosedNode>/top_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|topmimic_tb.vhd</ClosedNode>
+         <ClosedNode>/warmup1_tb - sim |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|warmup1.vhd</ClosedNode>
+         <ClosedNode>/wb_intercon_simple_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|top|wb_intercon_simple_tb.vhd</ClosedNode>
+         <ClosedNode>/wb_intercon_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|top|wb_intercon_tb.vhd</ClosedNode>
+         <ClosedNode>/wb_stestrd_tb - behavior |home|ctnguyen|Works|ESY|Assignment1|soc|testbench|wb_stestrd_tb.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>tb_switches - behavior (/home/ctnguyen/Works/ESY/Assignment2/tb_switches.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >27</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e0000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e00000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>tb_switches - behavior (/home/ctnguyen/Works/ESY/Assignment2/tb_switches.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001510000012001000000060100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+</Project>

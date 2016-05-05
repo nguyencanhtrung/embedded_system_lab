@@ -1,0 +1,37 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.exe -prj /home/ctnguyen/Works/ESY/ise_project/tb_switches_beh.prj work.tb_switches 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/core/lt16x32_global.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/lib/wishbone.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/lib/txt_util.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/lib/config.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/core/lt16x32_internal.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment2/switches.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment1/soc/lib/wb_tp.vhd" into library work
+Parsing VHDL file "/home/ctnguyen/Works/ESY/ise_project/../Assignment2/tb_switches.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 38956 KB
+Fuse CPU Usage: 1500 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package math_real
+Compiling package lt16x32_global
+Compiling package wishbone
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package config
+Compiling package txt_util
+Compiling package lt16x32_internal
+Compiling package wb_tp
+Compiling architecture behavioral of entity wb_switch [\wb_switch(983044,4194303)\]
+Compiling architecture behavior of entity tb_switches
+Time Resolution for simulation is 1ps.
+Compiled 15 VHDL Units
+Built simulation executable /home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.exe
+Fuse Memory Usage: 70424 KB
+Fuse CPU Usage: 1680 ms
+GCC CPU Usage: 4330 ms

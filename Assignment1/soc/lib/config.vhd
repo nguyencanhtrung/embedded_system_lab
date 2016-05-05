@@ -24,10 +24,12 @@ package config is
 	constant CFG_MST_TEST	: integer := 1;
 
 -- >> Slave indx  <<
-	constant CFG_MEM : integer := 0;
+	constant CFG_MEM 	: integer := 0;
 	constant CFG_DMEM : integer := CFG_MEM+1;
-	constant CFG_LED : integer := CFG_DMEM+1;
-
+	constant CFG_LED 	: integer := CFG_DMEM+1;
+		-- assignment 2
+	constant CFG_SW 	: integer := CFG_LED+1;
+		-- end of assignment 2
 -----------------------------
 -- base address (BADR) & mask address (MADR)
 -----------------------------
@@ -35,14 +37,19 @@ package config is
 	constant CFG_BADR_MEM		: generic_addr_type := 16#00000000#; -- fixed, must start from 0
 	constant CFG_BADR_DMEM		: generic_addr_type := CFG_BADR_MEM + IMEMSZ*4; --16#00000400#;
 	--constant CFG_BADR_NEXTFREEADDRESS		: generic_addr_type := 16#00000800#;
-	constant CFG_BADR_LED		: generic_addr_type := 16#000F0000#;
+	constant CFG_BADR_LED		: generic_addr_type := 16#000F0000#;--	| 4 bytes are
+		-- assignment 2																|
+	constant CFG_BADR_SW			: generic_addr_type := 16#000F0004#;--	| used for LED
+		-- end of assignment 2
 -- mask addr
 	constant CFG_MADR_ZERO		: generic_mask_type := 0;
 	constant CFG_MADR_FULL		: generic_mask_type := 16#3FFFFF#;
 	constant CFG_MADR_MEM		: generic_mask_type := 16#3FFFFF# - (IMEMSZ*4 -1);
 	constant CFG_MADR_DMEM		: generic_mask_type := 16#3FFFFF# - (256 -1); -- uses 6 word-bits, size 256 byte
 	constant CFG_MADR_LED		: generic_mask_type := 16#3FFFFF#; -- size=1 byte
-
+		-- assignment 2	
+	constant CFG_MADR_SW			: generic_mask_type := 16#3FFFFF#; -- size=1 byte
+		-- end of assignment 2
 end package config;
 
 package body config is

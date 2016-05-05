@@ -1,0 +1,40 @@
+Command line:
+   tb_switches_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  48119
+
+Thu May  5 03:37:16 2016
+
+
+ Elaboration Time: 0.09 sec
+
+ Current Memory Usage: 132.907 Meg
+
+ Total Signals          : 16
+ Total Nets             : 327
+ Total Signal Drivers   : 19
+ Total Blocks           : 13
+ Total Primitive Blocks : 12
+ Total Processes        : 15
+ Total Traceable Variables  : 133
+ Total Scalar Nets and Variables : 2082
+
+** Failure:Simulation terminated!
+User(VHDL) Code Called Simulation Stop
+In process tb_switches.vhd:stim_proc 
+ 
+
+
+** Failure:Simulation terminated!
+User(VHDL) Code Called Simulation Stop
+In process tb_switches.vhd:stim_proc 
+ 
+
+
+ Total Simulation Time: 1.09 sec
+
+ Current Memory Usage: 142.348 Meg
+
+Thu May  5 03:46:12 2016
+

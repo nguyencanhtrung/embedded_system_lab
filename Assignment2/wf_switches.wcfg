@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="lt16x32_global" />
+            <top_module name="lt16x32_internal" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_textio" />
+            <top_module name="tb_switches" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wb_tp" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/tb_switches/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">Gen Block</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/wslvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wslvo</obj_property>
+      <obj_property name="ObjectShortName">wslvo</obj_property>
+      <wvobject fp_name="/tb_switches/wslvo.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">wslvo.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_switches/wslvo.ack" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ack</obj_property>
+         <obj_property name="ObjectShortName">wslvo.ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_switches/wslvo.wbcfg" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbcfg</obj_property>
+         <obj_property name="ObjectShortName">wslvo.wbcfg</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/readdata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/msto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">msto</obj_property>
+      <obj_property name="ObjectShortName">msto</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">Switch Contr.</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/btn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">btn[6:0]</obj_property>
+      <obj_property name="ObjectShortName">btn[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/wslvi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wslvi</obj_property>
+      <obj_property name="ObjectShortName">wslvi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/uut/data_buffer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_buffer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_buffer[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/wslvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wslvo</obj_property>
+      <obj_property name="ObjectShortName">wslvo</obj_property>
+      <wvobject fp_name="/tb_switches/wslvo.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">wslvo.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_switches/wslvo.ack" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ack</obj_property>
+         <obj_property name="ObjectShortName">wslvo.ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_switches/wslvo.wbcfg" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbcfg</obj_property>
+         <obj_property name="ObjectShortName">wslvo.wbcfg</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider23" type="divider">
+      <obj_property name="label">Observation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_switches/readdata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

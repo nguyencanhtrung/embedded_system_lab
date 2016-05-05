@@ -1,0 +1,4 @@
+work	"../Assignment1/soc/core/lt16x32_global.vhd"
+work	"../Assignment1/soc/lib/config.vhd"
+work	"../Assignment1/soc/lib/wishbone.vhd"
+work	"../Assignment2/switches.vhd"

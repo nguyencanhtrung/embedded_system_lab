@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/core/core2wb.vhd" Line 36: <arg fmt="%s" index="1">rst</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd" Line 70: Assignment to <arg fmt="%s" index="1">ssel_idx</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/top/wb_intercon.vhd" Line 125: Assignment to <arg fmt="%s" index="1">mgnt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/mem/memwrapper.vhd" Line 132: <arg fmt="%s" index="1">rst</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 53: Net &lt;<arg fmt="%s" index="1">slvo[15]_dat[31]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 54: Net &lt;<arg fmt="%s" index="1">msto[3]_adr[31]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd" Line 65: Net &lt;<arg fmt="%s" index="1">irq_lines[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[3]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[2]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[1]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_adr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_dat</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_cti</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_bte</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[3]_ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[2]_ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">msti[1]_ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[15]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[14]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[13]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[12]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[11]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[10]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[9]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[8]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[7]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[6]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[5]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_we</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ctnguyen/Works/ESY/Assignment1/soc/top/top.vhd</arg>&quot; line <arg fmt="%s" index="2">152</arg>: Output port &lt;<arg fmt="%s" index="3">slvi[4]_cyc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">wbicn_inst</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[15]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[15]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[14]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[14]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[13]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[13]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[12]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[12]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[11]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[11]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[10]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[10]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[9]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[9]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[8]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[8]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[7]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[7]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[6]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[6]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[5]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[5]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[4]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[4]_wbcfg</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1111111111111111111111111111111111111111111111111111111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_adr</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_cti</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_bte</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_adr</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_cti</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_bte</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_adr</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_dat</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000000000000000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_cti</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_bte</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">irq_lines&lt;15:3&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">irq_lines&lt;0&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[15]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[14]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[13]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[12]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[11]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[10]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[9]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[8]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[7]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[6]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[5]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">slvo[4]_ack</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_we</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_stb</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[3]_cyc</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_we</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_stb</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[2]_cyc</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_we</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_stb</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">msto[1]_cyc</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">lt16soc_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">reg_array</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">branchdelay</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">input_instruction</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">input_instruction&lt;27:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">msto_cti&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_adr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_sel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_adr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_sel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_adr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_sel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[15]_wbcfg&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[15]_wbcfg&lt;33:32&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[14]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[14]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[13]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[13]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[12]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[12]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[11]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[11]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[10]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[10]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[9]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[9]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[8]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[8]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[7]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[7]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[6]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[6]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[5]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[5]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[4]_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[4]_wbcfg</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[3]_wbcfg&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[3]_wbcfg&lt;33:32&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[2]_wbcfg&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[2]_wbcfg&lt;33:32&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[1]_wbcfg&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[1]_wbcfg&lt;33:32&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[0]_wbcfg&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[0]_wbcfg&lt;33:32&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_we</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_stb</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[3]_cyc</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_we</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_stb</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[2]_cyc</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_we</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_stb</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">msto[1]_cyc</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[14]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[13]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[12]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[11]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[10]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[9]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[8]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[7]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[6]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[5]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">slvo[4]_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">in_imem_read_addr&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">out_dmem_ready</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_adr&lt;31:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_adr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_adr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_dat</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_sel</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_cti</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wslvi_bte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">immediate_signext_s3_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">datapath_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">24 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;immediate_signext_s3_8&gt; &lt;immediate_signext_s3_9&gt; &lt;immediate_signext_s3_10&gt; &lt;immediate_signext_s3_11&gt; &lt;immediate_signext_s3_12&gt; &lt;immediate_signext_s3_13&gt; &lt;immediate_signext_s3_14&gt; &lt;immediate_signext_s3_15&gt; &lt;immediate_signext_s3_16&gt; &lt;immediate_signext_s3_17&gt; &lt;immediate_signext_s3_18&gt; &lt;immediate_signext_s3_19&gt; &lt;immediate_signext_s3_20&gt; &lt;immediate_signext_s3_21&gt; &lt;immediate_signext_s3_22&gt; &lt;immediate_signext_s3_23&gt; &lt;immediate_signext_s3_24&gt; &lt;immediate_signext_s3_25&gt; &lt;immediate_signext_s3_26&gt; &lt;immediate_signext_s3_27&gt; &lt;immediate_signext_s3_28&gt; &lt;immediate_signext_s3_29&gt; &lt;immediate_signext_s3_30&gt; &lt;immediate_signext_s3_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;multicycleinstruction_5&gt; &lt;multicycleinstruction_6&gt; &lt;multicycleinstruction_7&gt; &lt;multicycleinstruction_8&gt; &lt;multicycleinstruction_9&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">data_buffer_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">swdev</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">pc_value_s2_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">datapath_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">msto_cti_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">core2wb_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_buffer_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">swdev</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm_inst</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">data_buffer</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">15</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">wb_switch</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">multicycleinstruction</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">20</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_out_dmem_read_size</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_out_dmem_write_size</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_output_s3_tflag_write_enable</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0145</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_out_irq_ack</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0054</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3213" delta="old" >HDL ADVISOR - Characteristics of the register &lt;<arg fmt="%s" index="1">imem_data</arg>&gt; prevent it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_memory</arg>&gt; for implementation as read-only block RAM.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_memory</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_memory1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_reg_array</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_reg_array1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">multicycleinstruction_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decoder_fsm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">multicycleinstruction_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decoder_fsm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">msto_cti_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">core2wb</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">immediate_signext_s3_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">datapath</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">24 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;immediate_signext_s3_8&gt; &lt;immediate_signext_s3_9&gt; &lt;immediate_signext_s3_10&gt; &lt;immediate_signext_s3_11&gt; &lt;immediate_signext_s3_12&gt; &lt;immediate_signext_s3_13&gt; &lt;immediate_signext_s3_14&gt; &lt;immediate_signext_s3_15&gt; &lt;immediate_signext_s3_16&gt; &lt;immediate_signext_s3_17&gt; &lt;immediate_signext_s3_18&gt; &lt;immediate_signext_s3_19&gt; &lt;immediate_signext_s3_20&gt; &lt;immediate_signext_s3_21&gt; &lt;immediate_signext_s3_22&gt; &lt;immediate_signext_s3_23&gt; &lt;immediate_signext_s3_24&gt; &lt;immediate_signext_s3_25&gt; &lt;immediate_signext_s3_26&gt; &lt;immediate_signext_s3_27&gt; &lt;immediate_signext_s3_28&gt; &lt;immediate_signext_s3_29&gt; &lt;immediate_signext_s3_30&gt; &lt;immediate_signext_s3_31&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lt16soc_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dmem/burst_state_FSM_FFd2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lt16soc_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dmem/burst_state_FSM_FFd1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">lt16soc_top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_register_write_size_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/controlpath_inst/in_dec_2_s2_dmem_read_size_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/imem_dec_signal_instruction_halfword_select</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/datapath_inst/pc_value_s2_1&gt; &lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/decoder_inst/decoder_fsm_inst/multicycleinstruction_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/datapath_inst/pc_value_s2_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/programcounter_inst/pc_value_old_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="3203" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/controlpath_inst/in_dec_3_s3_tflag_write_data_select</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/controlpath_inst/in_dec_3_s3_dmem_write_data_select&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="3203" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_tflag_write_data_select</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lt16soc_top</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;corewrap_inst/core_inst/controlpath_inst/in_dec_3_s2_dmem_write_data_select&gt; </arg>
+</msg>
+
+</messages>
+

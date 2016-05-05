@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ctnguyen/Works/ESY/ise_project/tb_switches_isim_beh.exe" -prj "/home/ctnguyen/Works/ESY/ise_project/tb_switches_beh.prj" "work.tb_switches" 
