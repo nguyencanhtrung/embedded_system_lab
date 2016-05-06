@@ -14,7 +14,7 @@ Contents
    Through the lab, students are going to learn about the architecture of an embedded system.
    Designing controllers to handle peripherals. 
    
-####2. Assignments<id="part2">
+####2. Assignments<a id="part2"></a>
   
 ####3. Final Project<id="part3">
   
