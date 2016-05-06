@@ -1,13 +1,12 @@
 Embedded System Laboratory
 Contents
 
-* [1. Description](#part1)
+    [1. Description](#part1)
 
-* [2. Assignments](#part2)
+    [2. Assignments](#part2)
 
-* [3. Final Project](#part3)
-
-* [4. Team members](#part4)
+    [3. Final Project](#part3)
+    [4. Team members](#part4)
 
 ####1. Description<a id="part1"></a>
    **_Embedded system lab_** includes _4 warm-up assignments_ and _1 final project_.
