@@ -1,12 +1,13 @@
 Embedded System Laboratory
 Contents
 
-    [1. Description](#part1)
+[1. Description](#part1)
 
-    [2. Assignments](#part2)
+[2. Assignments](#part2)
 
-    [3. Final Project](#part3)
-    [4. Team members](#part4)
+[3. Final Project](#part3)
+
+[4. Team members](#part4)
 
 ####1. Description<a id="part1"></a>
    **_Embedded system lab_** includes _4 warm-up assignments_ and _1 final project_.
@@ -18,5 +19,5 @@ Contents
 ####3. Final Project<a id="part3"></a>
   
 ####4. Team members<a id="part4"></a>
-  * [Trung C. Nguyen](nguyencanhtrung@me.com)
-  * [Waseem Hassan](waseemh40@gmail.com)
+  * [Trung C. Nguyen](mailto:nguyencanhtrung@me.com "Send an email to Trung")
+  * [Waseem Hassan](mailto:waseemh40@gmail.com "Send an email to Hassan")
