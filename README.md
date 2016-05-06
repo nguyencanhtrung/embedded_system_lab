@@ -5,9 +5,9 @@ Contents
 
 [2. Assignments](#part2)
 
-[3. Final Project](part3)
+[3. Final Project](#part3)
 
-[4. Team members](part4)
+[4. Team members](#part4)
 
 ####1. Description<a id="part1"></a>
    **_Embedded system lab_** includes _4 warm-up assignments_ and _1 final project_.
@@ -16,8 +16,8 @@ Contents
    
 ####2. Assignments<a id="part2"></a>
   
-####3. Final Project<id="part3">
+####3. Final Project<a id="part3"></a>
   
-####4. Team members<id="part4">
+####4. Team members<a id="part4"></a>
   * [Trung C. Nguyen](nguyencanhtrung@me.com)
   * [Waseem Hassan](waseemh40@gmail.com)
