@@ -1,9 +1,9 @@
 ###Embedded System Laboratory
 ####Contents
 
-[1.Description](#part1)
+[1. Description](#part1)
 
-[2.Assignments](#part2)
+[2. Assignments](#part2)
 
 [3. Final Project](#part3)
 
