@@ -46,3 +46,20 @@ _**TU Kaiserslautern - Winter Semester 2015/2016**_
 ####4. Team members<a id="part4"></a>
   * [Trung C. Nguyen](mailto:nguyencanhtrung@me.com "Send an email to Trung")
   * [Waseem Hassan](mailto:waseemh40@gmail.com "Send an email to Hassan")
+  * 
+  
+---
+Initial Setup Tutorial
+---
+#####Setup git
+
+1. Download and install git for linux/windows
+2. Open terminal or git bash
+3. Set your name $git config --global user.name "<name>"
+4. Set your mail address $git conifg --global user.email email@xx.com
+
+#####Get the current version
+
+1. Open terminal or git bash
+2. Go to a location of your choice
+3. Clone repository $git clone https://github.com/nguyencanhtrung/embedded_system_lab.git
