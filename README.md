@@ -11,6 +11,8 @@ _**TU Kaiserslautern - Winter Semester 2015/2016**_
 
 [4. Team members](#part4)
 
+[Initial Setup](#part5)
+
 ####1. Description<a id="part1"></a>
    **_Embedded system lab_** includes _4 warm-up assignments_ and _1 final project_.
    The goal of this laboratory is to gain an understanding of the general design methodology of communicating embedded systems as they are employed in technical systems in various fields, such as automotive systems, production automation and control, and mobile communication.
@@ -46,10 +48,9 @@ _**TU Kaiserslautern - Winter Semester 2015/2016**_
 ####4. Team members<a id="part4"></a>
   * [Trung C. Nguyen](mailto:nguyencanhtrung@me.com "Send an email to Trung")
   * [Waseem Hassan](mailto:waseemh40@gmail.com "Send an email to Hassan")
-  * 
   
 ---
-Initial Setup Tutorial
+Initial Setup Tutorial<a id="part5"></a>
 ---
 #####Setup git
 
